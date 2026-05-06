@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class",theme: {extend: {"colors": {"error-container": "#93000a","on-tertiary": "#502400","on-tertiary-fixed-variant": "#723600","surface-variant": "#333537","surface-container-low": "#1a1c1e","tertiary-container": "#df7412","primary-container": "#4d8eff","surface-bright": "#38393c","on-primary-container": "#00285d","surface-container-highest": "#333537","secondary-fixed": "#d3e4fe","on-surface-variant": "#c2c6d6","on-tertiary-fixed": "#311400","on-secondary-fixed-variant": "#38485d","tertiary": "#ffb786","on-primary-fixed": "#001a42","secondary-container": "#3a4a5f","inverse-on-surface": "#2f3133","outline-variant": "#424754","on-primary": "#002e6a","background": "#121416","on-error-container": "#ffdad6","on-primary-fixed-variant": "#004395","surface-tint": "#adc6ff","primary-fixed": "#d8e2ff","tertiary-fixed": "#ffdcc6","secondary": "#b7c8e1","surface-container": "#1e2022","on-secondary-fixed": "#0b1c30","surface": "#121416","primary-fixed-dim": "#adc6ff","secondary-fixed-dim": "#b7c8e1","primary": "#adc6ff","surface-container-high": "#282a2c","surface-container-lowest": "#0c0e10","outline": "#8c909f","on-surface": "#e2e2e5","on-error": "#690005","inverse-primary": "#005ac2","on-tertiary-container": "#461f00","tertiary-fixed-dim": "#ffb786","error": "#ffb4ab","on-secondary": "#213145","on-background": "#e2e2e5","on-secondary-container": "#a9bad3","surface-dim": "#121416","inverse-surface": "#e2e2e5"},"borderRadius": {"DEFAULT": "0.25rem","lg": "0.5rem","xl": "0.75rem","full": "9999px"},"spacing": {"margin": "2rem","xl": "2.5rem","lg": "1.5rem","md": "1rem","gutter": "1.5rem","sm": "0.5rem","base": "4px","xs": "0.25rem"},"fontFamily": {"body-lg": ["Inter"],"headline-md": ["Manrope"],"body-md": ["Inter"],"label-sm": ["Inter"],"headline-sm": ["Manrope"],"display-lg": ["Manrope"],"label-md": ["Inter"]},"fontSize": {"body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],"headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],"body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],"label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],"headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],"display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],"label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}]}},},}</script>
+<style>.material-symbols-outlined {font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;}body {background-color: #121416;color: #e2e2e5;}</style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md bg-background text-on-background">
+
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant">
+  <div class="max-w-[1200px] mx-auto px-gutter flex justify-between items-center h-20">
+    <a href="#" class="font-headline-sm text-headline-sm text-primary tracking-tighter">ARYAN.SINGH</a>
+    <div class="hidden md:flex items-center gap-md">
+      <a class="font-label-md text-label-md text-primary border-b-2 border-primary transition-all duration-200" href="#hero">Home</a>
+      <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200" href="#about">About</a>
+      <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200" href="#skills">Skills</a>
+      <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200" href="#projects">Projects</a>
+      <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all duration-200" href="#contact">Contact</a>
+    </div>
+    <button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md text-label-md hover:bg-primary/90 transition-colors duration-200">Let's Talk</button>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="max-w-[1200px] mx-auto px-gutter py-xl">
+  <div class="grid grid-cols-12">
+    <div class="col-span-12 md:col-span-8">
+      <h1 class="font-display-lg text-display-lg mb-md text-on-surface">Aryan Singh<br><span class="text-primary">Bhadoria</span></h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">Full Stack Developer & Co-Founder of Tokenistt — building production-grade systems that ship, scale, and get adopted. B.Tech CSIT '27, AITR Indore.</p>
+      <div class="flex flex-wrap gap-md">
+        <a href="#projects" class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md text-label-md hover:bg-primary/90 transition-colors duration-200 inline-flex items-center gap-xs">View My Work<span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+        <a href="#contact" class="border border-primary text-primary px-lg py-sm rounded-lg font-label-md text-label-md hover:bg-primary/10 transition-colors duration-200 inline-flex items-center gap-xs">Get In Touch<span class="material-symbols-outlined text-[18px]">mail</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="max-w-[1200px] mx-auto px-gutter py-lg">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+    <div class="bg-surface-container rounded-xl p-md border border-outline-variant">
+      <div class="font-headline-md text-headline-md text-primary mb-xs">5+</div>
+      <div class="font-body-md text-body-md text-on-surface-variant">Hackathons</div>
+    </div>
+    <div class="bg-surface-container rounded-xl p-md border border-outline-variant">
+      <div class="font-headline-md text-headline-md text-primary mb-xs">96%</div>
+      <div class="font-body-md text-body-md text-on-surface-variant">Token Reduction</div>
+    </div>
+    <div class="bg-surface-container rounded-xl p-md border border-outline-variant">
+      <div class="font-headline-md text-headline-md text-primary mb-xs">2</div>
+      <div class="font-body-md text-body-md text-on-surface-variant">Live Apps</div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="max-w-[1200px] mx-auto px-gutter py-xl">
+  <div class="grid grid-cols-12 gap-lg">
+    <div class="col-span-12 md:col-span-4">
+      <div class="font-label-md text-label-md text-primary uppercase tracking-wider mb-md">About Me</div>
+      <h2 class="font-headline-md text-headline-md text-on-surface mb-md">Who I Am</h2>
+    </div>
+    <div class="col-span-12 md:col-span-8">
+      <p class="font-body-lg text-body-lg text-on-surface-variant mb-md">I'm a <strong class="text-primary">Full Stack Developer</strong> and B.Tech CSIT student at Acropolis Institute of Technology and Research, Indore (2023–2027), building real-world production-grade systems from day one.</p>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mb-md">As Co-Founder of <strong class="text-primary">Tokenistt</strong>, I'm solving a critical problem in the AI space — LLMs are expensive because developers send massive, irrelevant context. Our optimization engine reduces token usage by up to <strong class="text-primary">96%</strong>, cutting costs from ~$0.55 to ~$0.02 per query.</p>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mb-md">I've competed at 5+ national and government hackathons across fintech, AI, and cultural tech — consistently reaching finals. I build things that ship, scale, and get adopted.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-md mt-md">
+        <div>
+          <div class="font-label-md text-label-md text-on-surface mb-xs">Location</div>
+          <div class="font-body-md text-body-md text-on-surface-variant">Indore, MP, India</div>
+        </div>
+        <div>
+          <div class="font-label-md text-label-md text-on-surface mb-xs">Email</div>
+          <a href="mailto:aryanbhadoria100@gmail.com" class="font-body-md text-body-md text-primary hover:underline">aryanbhadoria100@gmail.com</a>
+        </div>
+        <div>
+          <div class="font-label-md text-label-md text-on-surface mb-xs">College</div>
+          <div class="font-body-md text-body-md text-on-surface-variant">AITR — RGPV (2027)</div>
+        </div>
+        <div>
+          <div class="font-label-md text-label-md text-on-surface mb-xs">Status</div>
+          <div class="font-body-md text-body-md text-primary">● Open to Internships</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="max-w-[1200px] mx-auto px-gutter py-xl">
+  <div class="grid grid-cols-12 gap-lg">
+    <div class="col-span-12 md:col-span-4">
+      <div class="font-label-md text-label-md text-primary uppercase tracking-wider mb-md">My Skills</div>
+      <h2 class="font-headline-md text-headline-md text-on-surface">Technical Stack</h2>
+    </div>
+    <div class="col-span-12 md:col-span-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+        <div class="bg-surface-container rounded-xl p-md border border-outline-variant hover:border-primary transition-colors duration-200">
+          <div class="font-headline-sm text-headline-sm text-on-surface mb-md">Languages</div>
+          <div class="flex flex-wrap gap-sm">
+            <span class="bg-surface-variant text-on-surface px-sm py-xs rounded text-label-sm font-label-md">C++</span>
+            <span class="bg-surface-variant text-on-surface px-sm py-xs rounded text-label-sm font-label-md">JavaScript ES6+</span>
+            <span class="bg-surface-variant text-on-surface px-sm py-xs rounded text-label-sm font-label-md">Python</span>
+            <span class="bg-surface-variant text-on-surface px-sm py-xs rounded text-label-sm font-label-md">SQL</span>
+          </div>
+        </div>
+        <div class="bg-surface-container rounded-xl p-md border border-outline-variant hover:border-primary transition-colors duration-200">
+          <div class="font-headline-sm text-headline-sm text-on-surface mb-md">Frontend</div>
+          <div class="flex flex-wrap gap-sm">
+            <span class="bg-surface-variant text-on-surface px-sm py-xs rounded text-label-sm font-label-md">HTML5</span>
+            <span class="bg-surface-variant text-on-surface px-sm py-xs rounded text-label-sm font-label-md">CSS3</span>
+            <span class="bg-surface-variant text-on-surface px-sm py-xs rounded text-label-sm font-label-md">React</span>
+            <span class="bg-surface-variant text-on-surface px-sm py-xs rounded text-label-sm font-label-md">Tailwind</span>
+          </div>
+        </div>
+        <div class="bg-surface-container rounded-xl p-md border border-outline-variant hover:border-primary transition-colors duration-200">
+          <div class="font-headline-sm text-headline-sm text-on-surface mb-md">Backend</div>
+          <div class="flex flex-wrap gap-sm">
+            <span class="bg-surface-variant text-on-surface px-sm py-xs rounded text-label-sm font-label-md">Node.js</span>
+            <span class="bg-surface-variant text-on-surface px-sm py-xs rounded text-label-sm font-label-md">Express</span>
+            <span class="bg-surface-variant text-on-surface px-sm py-xs rounded text-label-sm font-label-md">MongoDB</span>
+            <span class="bg-surface-variant text-on-surface px-sm py-xs rounded text-label-sm font-label-md">Firebase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Work Gallery Grid -->
+<section id="projects" class="max-w-[1200px] mx-auto px-gutter py-lg">
+  <div class="grid grid-cols-12 gap-lg mb-lg">
+    <div class="col-span-12 md:col-span-8">
+      <div class="font-label-md text-label-md text-primary uppercase tracking-wider mb-md">Selected Work</div>
+      <h2 class="font-headline-md text-headline-md text-on-surface">Featured Projects</h2>
+    </div>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+    <!-- Project Card 1 -->
+    <div class="group border border-outline-variant bg-surface-container rounded-xl overflow-hidden hover:border-primary transition-colors duration-200">
+      <div class="aspect-video overflow-hidden border-b border-outline-variant">
+        <img alt="Tokenistt AI Optimization" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800"/>
+      </div>
+      <div class="p-md">
+        <div class="flex justify-between items-start mb-sm">
+          <span class="bg-primary-container text-on-primary-container px-sm py-xs rounded text-label-sm font-label-md uppercase">AI & Optimization</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm mb-xs text-on-surface">Tokenistt AI Optimization</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-md">LLM token optimization engine reducing usage by 96% — from $0.55 to $0.02 per query.</p>
+        <a class="inline-flex items-center gap-xs font-label-md text-label-md text-primary group-hover:underline" href="#">View Case Study<span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+      </div>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="group border border-outline-variant bg-surface-container rounded-xl overflow-hidden hover:border-primary transition-colors duration-200">
+      <div class="aspect-video overflow-hidden border-b border-outline-variant">
+        <img alt="Fintech Dashboard" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"/>
+      </div>
+      <div class="p-md">
+        <div class="flex justify-between items-start mb-sm">
+          <span class="bg-primary-container text-on-primary-container px-sm py-xs rounded text-label-sm font-label-md uppercase">Fintech</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm mb-xs text-on-surface">Fintech Analytics Dashboard</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-md">Real-time financial data visualization platform for small business owners.</p>
+        <a class="inline-flex items-center gap-xs font-label-md text-label-md text-primary group-hover:underline" href="#">View Case Study<span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+      </div>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div class="group border border-outline-variant bg-surface-container rounded-xl overflow-hidden hover:border-primary transition-colors duration-200">
+      <div class="aspect-video overflow-hidden border-b border-outline-variant">
+        <img alt="EcoTrack Sustainability App" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800"/>
+      </div>
+      <div class="p-md">
+        <div class="flex justify-between items-start mb-sm">
+          <span class="bg-primary-container text-on-primary-container px-sm py-xs rounded text-label-sm font-label-md uppercase">Sustainability</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm mb-xs text-on-surface">EcoTrack Sustainability App</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-md">Carbon footprint tracking platform helping individuals reduce their environmental impact.</p>
+        <a class="inline-flex items-center gap-xs font-label-md text-label-md text-primary group-hover:underline" href="#">View Case Study<span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+      </div>
+    </div>
+
+    <!-- Project Card 4 -->
+    <div class="group border border-outline-variant bg-surface-container rounded-xl overflow-hidden hover:border-primary transition-colors duration-200">
+      <div class="aspect-video overflow-hidden border-b border-outline-variant">
+        <img alt="HealthTrack Pro" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800"/>
+      </div>
+      <div class="p-md">
+        <div class="flex justify-between items-start mb-sm">
+          <span class="bg-primary-container text-on-primary-container px-sm py-xs rounded text-label-sm font-label-md uppercase">Healthcare</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm mb-xs text-on-surface">HealthTrack Pro</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-md">Patient management system with AI-powered appointment scheduling and reminders.</p>
+        <a class="inline-flex items-center gap-xs font-label-md text-label-md text-primary group-hover:underline" href="#">View Case Study<span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-surface-container-low py-xl">
+  <div class="max-w-[1200px] mx-auto px-gutter text-center">
+    <div class="inline-block border-l-4 border-primary pl-md text-left max-w-2xl mx-auto">
+      <h2 class="font-headline-md text-headline-md mb-sm text-on-surface">Have a complex problem that needs structural clarity?</h2>
+      <p class="font-body-lg text-body-lg mb-md text-on-surface-variant">I partner with leadership teams to solve deep-rooted architectural and strategic bottlenecks.</p>
+      <button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md text-label-md hover:bg-primary/90 transition-colors">Book a Strategy Audit</button>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="max-w-[1200px] mx-auto px-gutter py-xl">
+  <div class="grid grid-cols-12 gap-lg">
+    <div class="col-span-12 md:col-span-4">
+      <div class="font-label-md text-label-md text-primary uppercase tracking-wider mb-md">Get In Touch</div>
+      <h2 class="font-headline-md text-headline-md text-on-surface mb-md">Let's Work Together</h2>
+      <p class="font-body-md text-body-md text-on-surface-variant mb-lg">Ready to start your next project? I'm currently open to internships and freelance opportunities.</p>
+      <div class="space-y-md">
+        <a href="mailto:aryanbhadoria100@gmail.com" class="flex items-center gap-md font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-[24px]">email</span>
+          aryanbhadoria100@gmail.com
+        </a>
+        <a href="tel:+917999124368" class="flex items-center gap-md font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-[24px]">phone</span>
+          +91 7999124368
+        </a>
+        <a href="https://github.com/Aryan-theccool" target="_blank" class="flex items-center gap-md font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-[24px]">code</span>
+          github.com/Aryan-theccool
+        </a>
+        <a href="https://linkedin.com/in/aryan-singh-bhadoria" target="_blank" class="flex items-center gap-md font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-[24px]">work</span>
+          linkedin.com/in/aryan-singh-bhadoria
+        </a>
+      </div>
+    </div>
+    <div class="col-span-12 md:col-span-8">
+      <form class="space-y-md">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+          <div class="space-y-sm">
+            <label class="font-label-md text-label-md text-on-surface-variant">Name</label>
+            <input type="text" class="w-full bg-surface border border-outline-variant rounded-lg px-md py-sm font-body-md text-body-md text-on-surface focus:border-primary focus:outline-none transition-colors" placeholder="Your name"/>
+          </div>
+          <div class="space-y-sm">
+            <label class="font-label-md text-label-md text-on-surface-variant">Email</label>
+            <input type="email" class="w-full bg-surface border border-outline-variant rounded-lg px-md py-sm font-body-md text-body-md text-on-surface focus:border-primary focus:outline-none transition-colors" placeholder="your.email@example.com"/>
+          </div>
+        </div>
+        <div class="space-y-sm">
+          <label class="font-label-md text-label-md text-on-surface-variant">Subject</label>
+          <input type="text" class="w-full bg-surface border border-outline-variant rounded-lg px-md py-sm font-body-md text-body-md text-on-surface focus:border-primary focus:outline-none transition-colors" placeholder="How can I help?"/>
+        </div>
+        <div class="space-y-sm">
+          <label class="font-label-md text-label-md text-on-surface-variant">Message</label>
+          <textarea rows="5" class="w-full bg-surface border border-outline-variant rounded-lg px-md py-sm font-body-md text-body-md text-on-surface focus:border-primary focus:outline-none transition-colors" placeholder="Tell me about your project..."></textarea>
+        </div>
+        <button type="button" class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md text-label-md hover:bg-primary/90 transition-colors">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+  <div class="max-w-[1200px] mx-auto px-gutter py-xl flex flex-col md:flex-row justify-between items-start gap-md">
+    <div class="flex flex-col gap-sm">
+      <div class="font-headline-sm text-headline-sm text-primary tracking-tighter">ARYAN.SINGH</div>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Precision-engineered code for the modern web.</p>
+    </div>
+    <div class="flex flex-col md:flex-row gap-lg">
+      <div class="flex flex-col gap-xs">
+        <span class="font-label-md text-label-md text-on-surface mb-xs">Navigation</span>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#hero">Home</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#projects">Projects</a>
+      </div>
+      <div class="flex flex-col gap-xs">
+        <span class="font-label-md text-label-md text-on-surface mb-xs">Connect</span>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/Aryan-theccool" target="_blank">GitHub</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="https://linkedin.com/in/aryan-singh-bhadoria" target="_blank">LinkedIn</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="mailto:aryanbhadoria100@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="flex flex-col items-start md:items-end gap-sm mt-md md:mt-0">
+      <div class="font-body-md text-body-md text-on-surface-variant">© 2024 Aryan Singh Bhadoria. Built with precision.</div>
+      <div class="flex gap-md">
+        <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary" href="#">Privacy Policy</a>
+        <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary" href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
