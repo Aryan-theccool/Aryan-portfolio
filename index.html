@@ -1211,6 +1211,11 @@
       <div id="projects" class="reveal">
         <h2 class="section-title">High-Impact Projects</h2>
         <div class="features">
+          <div class="feature project-card" data-project="neuronhire">
+            <span class="feature-icon">🚀</span>
+            <div class="feature-title">NeuronHire — AI Hiring</div>
+            <div class="feature-desc">AI-powered hiring platform matching developers with the right projects via intelligent requirement analysis.</div>
+          </div>
           <div class="feature project-card" data-project="dharohar">
             <span class="feature-icon">🏛️</span>
             <div class="feature-title">Dharohar — Heritage Protection</div>
@@ -1302,10 +1307,26 @@
         <div class="exp-item">
           <div class="exp-date">2023 - 2027</div>
           <div class="exp-content">
-            <div class="exp-title">B.Tech CSIT</div>
+            <div class="exp-title">B.Tech CSIT (CGPA: 7.4)</div>
             <div class="exp-company">AITR Indore</div>
             <div class="exp-desc">Focusing on distributed systems and AI architecture. National Finalist at AWS AI for
               Bharat Hackathon.</div>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-date">2023</div>
+          <div class="exp-content">
+            <div class="exp-title">Class 12th (Senior Secondary)</div>
+            <div class="exp-company">90.6%</div>
+            <div class="exp-desc">Strong foundation in Mathematics and Computer Science.</div>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-date">2021</div>
+          <div class="exp-content">
+            <div class="exp-title">Class 10th (Secondary)</div>
+            <div class="exp-company">91.4%</div>
+            <div class="exp-desc">Awarded for academic excellence in core subjects.</div>
           </div>
         </div>
       </div>
@@ -1444,9 +1465,9 @@
 
     const commands = {
       help: "Available commands: <span class='t-info'>about</span>, <span class='t-info'>skills</span>, <span class='t-info'>projects</span>, <span class='t-info'>tokenistt</span>, <span class='t-info'>contact</span>, <span class='t-info'>clear</span>",
-      about: "Aryan Singh: Co-Founder @ Tokenistt, AI Researcher, and Full Stack Developer.",
+      about: "Aryan Singh: Co-Founder @ Tokenistt, AI Researcher, and Full Stack Developer. Academic Excellence: CGPA 7.4.",
       skills: "Stack: AWS, Blockchain (Ethereum), Python, Node.js, React, MongoDB, GIS (PostGIS).",
-      projects: "High-Impact: Dharohar (AWS AI), Astitva (FRA Governance), RealtimeGuard (Fraud AI).",
+      projects: "High-Impact: NeuronHire (AI Hiring), Dharohar (AWS AI), Astitva (FRA Governance), RealtimeGuard (Fraud AI).",
       tokenistt: "Status: MCP server live. Tools: analyze, predict, optimize. Saving devs up to 96% on costs.",
       contact: "Email: aryanbhadoria100@gmail.com | LinkedIn: /in/aryan-singh-bhadoria-70086a28a | GitHub: @Aryan-theccool",
       clear: "clear"
@@ -1535,6 +1556,10 @@
 
     // === PROJECT MODAL LOGIC ===
     const projectData = {
+      neuronhire: {
+        title: "NeuronHire — AI Hiring",
+        desc: "An AI-powered hiring and workflow platform designed to solve client-developer mismatches. Features AI-driven requirement analysis, developer matching, and workflow tracking. Built with TypeScript and Node.js."
+      },
       dharohar: {
         title: "Dharohar — Heritage Protection",
         desc: "AWS AI for Bharat Hackathon National Finalist. Digitizing India's traditional knowledge to prevent biopiracy using AWS Transcribe, Bedrock, and an immutable ledger. Direct community royalty system built on smart contracts."
