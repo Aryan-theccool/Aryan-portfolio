@@ -278,12 +278,30 @@
       text-transform: uppercase;
     }
 
-    .nav-links { display: flex; gap: 24px; align-items: center; }
-    .nav-link { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; transition: color 0.2s; }
-    .nav-link:hover { color: var(--accent); }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: var(--accent);
+    }
 
     /* Live Clock */
-    .live-clock { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.3); margin-left: 20px; }
+    .live-clock {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.3);
+      margin-left: 20px;
+    }
 
     /* Main Content */
     main {
@@ -298,8 +316,10 @@
       background: radial-gradient(circle at center, transparent 0%, rgba(1, 2, 4, 0.4) 100%);
     }
 
-    h1, h2, .section-title {
-      text-shadow: 0 4px 30px rgba(0,0,0,0.9);
+    h1,
+    h2,
+    .section-title {
+      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
     }
 
     /* Hero */
@@ -371,7 +391,7 @@
       color: rgba(255, 255, 255, 0.85);
       max-width: 520px;
       margin: 0 auto 36px;
-      text-shadow: 0 2px 15px rgba(0,0,0,0.7);
+      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
     }
 
     .hero-sub strong {
@@ -741,12 +761,23 @@
       margin-bottom: 48px;
     }
 
-    .nav-link { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; transition: color 0.2s; }
-    .nav-link:hover { color: var(--accent); }
+    .nav-link {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: var(--accent);
+    }
 
     .modal-overlay {
       transition: all 0.2s ease;
     }
+
     .modal-content {
       transition: transform 0.2s ease;
     }
@@ -830,30 +861,51 @@
 
     /* Experience Section */
     .experience-section {
-      max-width: 1000px; width: 100%;
+      max-width: 1000px;
+      width: 100%;
       margin-bottom: 64px;
     }
+
     .exp-item {
       padding: 24px;
       margin-bottom: 16px;
       border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.06);
-      background: rgba(255,255,255,0.02);
-      display: flex; gap: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.02);
+      display: flex;
+      gap: 24px;
       transition: all 0.3s ease;
     }
+
     .exp-item:hover {
       border-color: rgba(0, 112, 255, 0.3);
       background: rgba(0, 112, 255, 0.03);
     }
+
     .exp-date {
-      font-size: 14px; color: var(--accent);
+      font-size: 14px;
+      color: var(--accent);
       font-family: 'JetBrains Mono', monospace;
       min-width: 120px;
     }
-    .exp-title { font-weight: 700; font-size: 18px; margin-bottom: 4px; }
-    .exp-company { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
-    .exp-desc { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.6); }
+
+    .exp-title {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .exp-company {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 12px;
+    }
+
+    .exp-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.6);
+    }
 
     /* Interactive Terminal Styling */
     .terminal-body {
@@ -862,17 +914,37 @@
       scrollbar-width: thin;
       scrollbar-color: var(--accent) transparent;
     }
-    .terminal-body::-webkit-scrollbar { width: 4px; }
-    .terminal-body::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
-    .terminal-input-line { display: flex; align-items: center; gap: 8px; }
+
+    .terminal-body::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .terminal-body::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 10px;
+    }
+
+    .terminal-input-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     .terminal-input {
-      background: transparent; border: none; color: #fff;
-      font-family: 'JetBrains Mono', monospace; font-size: 13px;
-      width: 100%; outline: none;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      width: 100%;
+      outline: none;
     }
 
     @media (max-width: 768px) {
-      .exp-item { flex-direction: column; gap: 8px; }
+      .exp-item {
+        flex-direction: column;
+        gap: 8px;
+      }
     }
 
     /* Testimonials */
@@ -880,21 +952,53 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 24px;
-      max-width: 1000px; width: 100%;
+      max-width: 1000px;
+      width: 100%;
       margin-bottom: 80px;
     }
+
     .testimonial-card {
       padding: 32px;
       border-radius: 20px;
-      border: 1px solid rgba(255,255,255,0.06);
-      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.02);
       backdrop-filter: blur(12px);
     }
-    .t-quote { font-size: 15px; font-style: italic; color: rgba(255,255,255,0.7); margin-bottom: 20px; }
-    .t-author { display: flex; align-items: center; gap: 12px; }
-    .t-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
-    .t-name { font-weight: 600; font-size: 14px; }
-    .t-pos { font-size: 12px; color: rgba(255,255,255,0.4); }
+
+    .t-quote {
+      font-size: 15px;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
+    }
+
+    .t-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .t-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .t-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .t-pos {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+    }
 
     /* Scroll Animations */
     .reveal {
@@ -902,18 +1006,20 @@
       transform: translateY(30px);
       transition: all 0.8s ease-out;
     }
+
     .reveal.active {
       opacity: 1;
       transform: translateY(0);
     }
 
     .footer-link {
-      color: rgba(255,255,255,0.4);
+      color: rgba(255, 255, 255, 0.4);
       text-decoration: none;
       font-size: 14px;
       transition: all 0.2s ease;
       font-weight: 500;
     }
+
     .footer-link:hover {
       color: var(--accent);
       transform: translateY(-2px);
@@ -929,26 +1035,64 @@
 
     /* Modals */
     .modal-overlay {
-      position: fixed; inset: 0; background: rgba(0,0,0,0.8);
-      backdrop-filter: blur(8px); z-index: 1000;
-      display: none; align-items: center; justify-content: center;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
       padding: 20px;
     }
+
     .modal-content {
-      background: #0a0c10; border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 24px; max-width: 600px; width: 100%;
-      padding: 40px; position: relative;
-      transform: scale(0.9); transition: transform 0.3s ease;
+      background: #0a0c10;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      max-width: 600px;
+      width: 100%;
+      padding: 40px;
+      position: relative;
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
     }
-    .modal-overlay.active { display: flex; }
-    .modal-overlay.active .modal-content { transform: scale(1); }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: scale(1);
+    }
+
     .modal-close {
-      position: absolute; top: 20px; right: 20px;
-      background: rgba(255,255,255,0.05); border: none; color: #fff;
-      width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: none;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
     }
-    .modal-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 24px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; color: var(--accent); }
-    .modal-body { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.6); }
+
+    .modal-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+
+    .modal-body {
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.6);
+    }
 
     /* Responsive */
     @media (max-width: 768px) {
@@ -1023,7 +1167,8 @@
           <span class="h1-line2">Co-Founder of Tokenistt.</span>
         </h1>
         <p class="hero-sub">
-          I build production-grade systems that ship, scale, and get adopted. Co-Founder at <strong>Tokenistt</strong>. Published Researcher in AI Governance. Expert in reducing LLM token costs by <strong>96%</strong>.
+          I build production-grade systems that ship, scale, and get adopted. Co-Founder at <strong>Tokenistt</strong>.
+          Published Researcher in AI Governance. Expert in reducing LLM token costs by <strong>96%</strong>.
         </p>
         <div class="waitlist-form">
           <div class="input-group" style="justify-content: center; flex-direction: row; flex-wrap: wrap;">
@@ -1045,13 +1190,20 @@
       </div>
 
       <div id="about" class="about-section">
-        <h2 class="section-title" style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:800; letter-spacing:-0.03em;">Co-Founder @ Tokenistt</h2>
+        <h2 class="section-title"
+          style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:800; letter-spacing:-0.03em;">Co-Founder @
+          Tokenistt</h2>
         <div class="about-content">
           <div class="about-text">
-            <p>I'm Aryan Singh, the Co-Founder of <a href="https://tokenistt.com/" target="_blank" style="color:var(--accent); text-decoration:none;"><strong>Tokenistt</strong></a>—a token intelligence platform for Claude API developers. I help teams count, optimize, and cut API costs before they spend a single dollar.</p>
+            <p>I'm Aryan Singh, the Co-Founder of <a href="https://tokenistt.com/" target="_blank"
+                style="color:var(--accent); text-decoration:none;"><strong>Tokenistt</strong></a>—a token intelligence
+              platform for Claude API developers. I help teams count, optimize, and cut API costs before they spend a
+              single dollar.</p>
           </div>
           <div class="about-text">
-            <p>Beyond Tokenistt, I build AI-driven platforms for social impact, from <strong>FRA Governance</strong> to <strong>Heritage Protection</strong>. I bridge the gap between complex legal frameworks and scalable technology.</p>
+            <p>Beyond Tokenistt, I build AI-driven platforms for social impact, from <strong>FRA Governance</strong> to
+              <strong>Heritage Protection</strong>. I bridge the gap between complex legal frameworks and scalable
+              technology.</p>
           </div>
         </div>
       </div>
@@ -1062,22 +1214,26 @@
           <div class="feature project-card" data-project="dharohar">
             <span class="feature-icon">🏛️</span>
             <div class="feature-title">Dharohar — Heritage Protection</div>
-            <div class="feature-desc">AWS AI National Finalist. Digitizing India's traditional knowledge to prevent biopiracy with 80% direct royalty.</div>
+            <div class="feature-desc">AWS AI National Finalist. Digitizing India's traditional knowledge to prevent
+              biopiracy with 80% direct royalty.</div>
           </div>
           <div class="feature project-card" data-project="astitva">
             <span class="feature-icon">🌿</span>
             <div class="feature-title">Astitva — FRA Governance</div>
-            <div class="feature-desc">Published AI platform for Forest Rights Act implementation. 89.2% accuracy in processing 15,000 claims.</div>
+            <div class="feature-desc">Published AI platform for Forest Rights Act implementation. 89.2% accuracy in
+              processing 15,000 claims.</div>
           </div>
           <div class="feature project-card" data-project="realtimeguard">
             <span class="feature-icon">🛡️</span>
             <div class="feature-title">RealtimeGuard — Fraud AI</div>
-            <div class="feature-desc">Blockchain-secured financial monitoring with sub-second latency and PMLA compliance.</div>
+            <div class="feature-desc">Blockchain-secured financial monitoring with sub-second latency and PMLA
+              compliance.</div>
           </div>
           <div class="feature project-card" data-project="tokenistt">
             <span class="feature-icon">🤖</span>
             <div class="feature-title">Tokenistt Intelligence</div>
-            <div class="feature-desc">Co-Founder & Lead Dev. MCP server & VS Code extension saving developers up to 96% on Claude API costs.</div>
+            <div class="feature-desc">Co-Founder & Lead Dev. MCP server & VS Code extension saving developers up to 96%
+              on Claude API costs.</div>
           </div>
         </div>
       </div>
@@ -1127,8 +1283,11 @@
           <div class="exp-date">2024 - Present</div>
           <div class="exp-content">
             <div class="exp-title">Co-Founder & Lead Developer</div>
-            <div class="exp-company"><a href="https://tokenistt.com/" target="_blank" style="color:var(--accent); text-decoration:none;">Tokenistt — tokenistt.com</a></div>
-            <div class="exp-desc">Building an MCP server and VS Code extension for Claude API cost optimization. Developed tools for exact token analysis, cost prediction, and prompt compression (saving ~96% per query).</div>
+            <div class="exp-company"><a href="https://tokenistt.com/" target="_blank"
+                style="color:var(--accent); text-decoration:none;">Tokenistt — tokenistt.com</a></div>
+            <div class="exp-desc">Building an MCP server and VS Code extension for Claude API cost optimization.
+              Developed tools for exact token analysis, cost prediction, and prompt compression (saving ~96% per query).
+            </div>
           </div>
         </div>
         <div class="exp-item">
@@ -1136,7 +1295,8 @@
           <div class="exp-content">
             <div class="exp-title">Published Researcher</div>
             <div class="exp-company">IJAITR Vol. 3</div>
-            <div class="exp-desc">Author of "Astitva: AI-Powered FRA Governance Platform". Published work on digitizing tribal land claims and mapping assets via GIS for legal implementation.</div>
+            <div class="exp-desc">Author of "Astitva: AI-Powered FRA Governance Platform". Published work on digitizing
+              tribal land claims and mapping assets via GIS for legal implementation.</div>
           </div>
         </div>
         <div class="exp-item">
@@ -1144,7 +1304,8 @@
           <div class="exp-content">
             <div class="exp-title">B.Tech CSIT</div>
             <div class="exp-company">AITR Indore</div>
-            <div class="exp-desc">Focusing on distributed systems and AI architecture. National Finalist at AWS AI for Bharat Hackathon.</div>
+            <div class="exp-desc">Focusing on distributed systems and AI architecture. National Finalist at AWS AI for
+              Bharat Hackathon.</div>
           </div>
         </div>
       </div>
@@ -1171,7 +1332,8 @@
         <h2 class="section-title" style="text-align: center;">Testimonials</h2>
         <div class="testimonials-grid">
           <div class="testimonial-card">
-            <div class="t-quote">"Aryan's ability to optimize LLM contexts is unparalleled. He reduced our API costs by nearly 95% in just a few weeks."</div>
+            <div class="t-quote">"Aryan's ability to optimize LLM contexts is unparalleled. He reduced our API costs by
+              nearly 95% in just a few weeks."</div>
             <div class="t-author">
               <div class="t-avatar">JD</div>
               <div>
@@ -1181,7 +1343,8 @@
             </div>
           </div>
           <div class="testimonial-card">
-            <div class="t-quote">"A rare talent who understands both the deep technical architecture and the business value of scale. Highly recommended."</div>
+            <div class="t-quote">"A rare talent who understands both the deep technical architecture and the business
+              value of scale. Highly recommended."</div>
             <div class="t-author">
               <div class="t-avatar">AS</div>
               <div>
@@ -1191,7 +1354,8 @@
             </div>
           </div>
           <div class="testimonial-card">
-            <div class="t-quote">"Winning Void Hack 7.0 was no fluke. Aryan's project was the most polished and innovative one we saw all weekend."</div>
+            <div class="t-quote">"Winning Void Hack 7.0 was no fluke. Aryan's project was the most polished and
+              innovative one we saw all weekend."</div>
             <div class="t-author">
               <div class="t-avatar">MK</div>
               <div>
@@ -1214,7 +1378,8 @@
           <textarea class="form-textarea" rows="5" placeholder="Your Message" required></textarea>
           <button type="submit" class="send-btn" id="sendBtn">Send Message</button>
         </form>
-        <div id="formSuccess" style="display:none; text-align: center; color: var(--accent); margin-top: 16px; font-weight: 600;">
+        <div id="formSuccess"
+          style="display:none; text-align: center; color: var(--accent); margin-top: 16px; font-weight: 600;">
           Message sent successfully! I'll get back to you soon.
         </div>
       </div>
@@ -1244,7 +1409,8 @@
     <footer>
       <div style="margin-bottom: 24px; display: flex; justify-content: center; gap: 20px;">
         <a href="https://github.com/Aryan-theccool" target="_blank" class="footer-link">GitHub</a>
-        <a href="https://www.linkedin.com/in/aryan-singh-bhadoria-70086a28a/" target="_blank" class="footer-link">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/aryan-singh-bhadoria-70086a28a/" target="_blank"
+          class="footer-link">LinkedIn</a>
         <a href="https://www.linkedin.com/company/tokenistt" target="_blank" class="footer-link">Tokenistt</a>
       </div>
       <div>Building production-grade systems that ship and scale.</div>
