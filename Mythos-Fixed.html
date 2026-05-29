@@ -1057,6 +1057,11 @@
       <div id="projects" class="reveal">
         <h2 class="section-title">High-Impact Projects</h2>
         <div class="features">
+          <div class="feature project-card" data-project="neuronhire">
+            <span class="feature-icon">🚀</span>
+            <div class="feature-title">NeuronHire — AI Hiring</div>
+            <div class="feature-desc">AI-powered hiring platform matching developers with the right projects via intelligent requirement analysis.</div>
+          </div>
           <div class="feature project-card" data-project="dharohar">
             <span class="feature-icon">🏛️</span>
             <div class="feature-title">Dharohar — Heritage Protection</div>
@@ -1076,6 +1081,11 @@
             <span class="feature-icon">🤖</span>
             <div class="feature-title">Tokenistt Intelligence</div>
             <div class="feature-desc">Founder & Lead Dev. MCP server & VS Code extension saving developers up to 96% on Claude API costs.</div>
+          </div>
+          <div class="feature project-card" data-project="inkspace">
+            <span class="feature-icon">🎨</span>
+            <div class="feature-title">Inkspace — Infinite Whiteboard</div>
+            <div class="feature-desc">Real-time collaborative infinite canvas with custom screen-to-world math, Yjs multiplayer sync, and hand-drawn styling.</div>
           </div>
         </div>
       </div>
@@ -1278,7 +1288,7 @@
       help: "Available commands: <span class='t-info'>about</span>, <span class='t-info'>skills</span>, <span class='t-info'>projects</span>, <span class='t-info'>tokenistt</span>, <span class='t-info'>contact</span>, <span class='t-info'>clear</span>",
       about: "Aryan Singh: Founder @ Tokenistt, AI Researcher, and Full Stack Developer.",
       skills: "Stack: AWS, Blockchain (Ethereum), Python, Node.js, React, MongoDB, GIS (PostGIS).",
-      projects: "High-Impact: Dharohar (AWS AI), Astitva (FRA Governance), RealtimeGuard (Fraud AI).",
+      projects: "High-Impact: NeuronHire (AI Hiring), Dharohar (AWS AI), Astitva (FRA Governance), RealtimeGuard (Fraud AI), Inkspace (Infinite Canvas).",
       tokenistt: "Status: MCP server live. Tools: analyze, predict, optimize. Saving devs up to 96% on costs.",
       contact: "Email: aryanbhadoria100@gmail.com | LinkedIn: /in/aryan-singh-bhadoria-70086a28a | GitHub: @Aryan-theccool",
       clear: "clear"
@@ -1367,6 +1377,10 @@
 
     // === PROJECT MODAL LOGIC ===
     const projectData = {
+      neuronhire: {
+        title: "NeuronHire — AI Hiring",
+        desc: "An AI-powered hiring and workflow platform designed to solve client-developer mismatches. Features AI-driven requirement analysis, developer matching, and workflow tracking. Built with TypeScript and Node.js."
+      },
       dharohar: {
         title: "Dharohar — Heritage Protection",
         desc: "AWS AI for Bharat Hackathon National Finalist. Digitizing India's traditional knowledge to prevent biopiracy using AWS Transcribe, Bedrock, and an immutable ledger. Direct community royalty system built on smart contracts."
@@ -1382,6 +1396,10 @@
       tokenistt: {
         title: "Tokenistt Intelligence",
         desc: "A token intelligence platform for Claude API developers. Includes an MCP server with tools for exact token analysis, cost prediction, and context optimization. Built to save developers time and thousands in API costs."
+      },
+      inkspace: {
+        title: "Inkspace — Infinite Collaborative Whiteboard",
+        desc: "A premium real-time collaborative infinite-canvas whiteboard application. Built with Next.js 14, Tailwind, and Liveblocks managed WebSockets. Features low-latency multiplayer synchronization, custom screen-to-world coordinate mapping mathematics, an optimized freehand canvas draw loop using requestAnimationFrame, and hand-drawn styling utilizing RoughJS. Uses Zustand stores to bypass React's component re-render bottleneck during continuous stroke updates."
       }
     };
 

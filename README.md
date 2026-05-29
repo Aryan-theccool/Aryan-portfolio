@@ -68,6 +68,15 @@ Welcome to the official repository of my premium developer portfolio. I build pr
 *   **Description**: Financial transaction monitor operating with sub-second latency to prevent fraud, money laundering (PMLA compliance), structuring, CTR, and velocity spikes.
 *   **Stack**: Ethereum Audits, Node.js, PostgreSQL.
 
+### 6. Inkspace — Infinite Collaborative Whiteboard
+*   **Description**: A premium, real-time collaborative infinite-canvas whiteboard application. It enables users to brainstorm, diagram, and build dynamic workflows (like system architectures, roadmap kanbans, or mind maps) with low-latency multiplayer synchronization.
+*   **Key Features**:
+    *   **Low-latency Multiplayer Sync**: Managed WebSockets utilizing the Liveblocks Yjs provider and Conflict-Free Replicated Data Types (Yjs CRDTs).
+    *   **Zustand Store Architecture**: Bypasses React's rendering lifecycle via transient store subscriptions to execute rapid vector stroke coordinates at 60fps.
+    *   **Complex Viewport Mathematics**: Custom screen-to-world linear mapping calculations to enable smooth panning, pinch-zooming, and bounding grid alignments.
+    *   **Hand-drawn Aesthetic**: Integrates RoughJS pipelines to mimic human sketch inaccuracies.
+*   **Stack**: Next.js 14, React.js, TailwindCSS, Zustand, Yjs, Liveblocks, RoughJS.
+
 ---
 
 ## 🎨 Portfolio Architecture & Interactive Features
