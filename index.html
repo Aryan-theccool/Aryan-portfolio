@@ -303,8 +303,77 @@
 
     /* Hero */
     .hero {
-      text-align: center;
-      max-width: 700px;
+      width: 100%;
+      max-width: 1050px;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .hero-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-photo-wrapper {
+      position: relative;
+      width: 290px;
+      height: 290px;
+      border-radius: 50%;
+      padding: 6px;
+      background: linear-gradient(135deg, #0070ff, #00d4ff);
+      box-shadow: 0 0 30px rgba(0, 112, 255, 0.4),
+                  inset 0 0 15px rgba(255, 255, 255, 0.2);
+      animation: photo-gentle-float 6s ease-in-out infinite;
+    }
+
+    .hero-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #040507;
+      display: block;
+    }
+
+    @keyframes photo-gentle-float {
+      0% {
+        transform: translateY(0px) rotate(0deg);
+        box-shadow: 0 0 35px rgba(0, 112, 255, 0.4);
+      }
+      50% {
+        transform: translateY(-12px) rotate(3deg);
+        box-shadow: 0 0 50px rgba(0, 112, 255, 0.6);
+      }
+      100% {
+        transform: translateY(0px) rotate(0deg);
+        box-shadow: 0 0 35px rgba(0, 112, 255, 0.4);
+      }
+    }
+
+    .hero-left .hero-sub {
+      margin: 0 0 36px 0;
+    }
+
+    .hero-left .input-group {
+      margin: 0;
+    }
+
+    .hero-left .stats {
+      justify-content: flex-start;
+      margin-bottom: 0;
     }
 
     .eyebrow {
@@ -1169,6 +1238,40 @@
 
     /* Responsive */
     @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+      }
+
+      .hero-left {
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-left .hero-sub {
+        margin: 0 auto 36px;
+      }
+
+      .hero-left .input-group {
+        margin: 0 auto;
+        justify-content: center !important;
+      }
+
+      .hero-left .stats {
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .hero-photo-wrapper {
+        width: 220px;
+        height: 220px;
+      }
+
       .features {
         grid-template-columns: 1fr;
       }
@@ -1338,33 +1441,44 @@
 
     <main>
       <div class="hero">
-        <div class="eyebrow">
-          <span class="eyebrow-dot"></span>Full Stack Developer & Co-Founder
-        </div>
-        <h1>
-          <span class="h1-line1">Aryan Singh</span>
-          <span class="h1-line2">Bhadoria.</span>
-        </h1>
-        <p class="hero-sub">
-          I build production-grade systems that ship, scale, and get adopted. Co-Founder at <strong>Tokenistt</strong>.
-          Published Researcher in AI Governance. Expert in reducing LLM token costs by <strong>31%</strong>.
-        </p>
-        <div class="waitlist-form">
-          <div class="input-group" style="justify-content: center; flex-direction: row; flex-wrap: wrap;">
-            <a href="mailto:aryanbhadoria100@gmail.com" class="submit-btn" id="emailMeBtn"
-              style="text-decoration: none; text-align: center;">Email Me</a>
-            <a href="https://tokenistt.com/" target="_blank" class="email-input"
-              style="text-decoration: none; text-align: center; display: inline-block;">Tokenistt.com</a>
-            <a href="Aryan resume.pdf" download class="email-input"
-              style="text-decoration: none; text-align: center; display: inline-block;">Aryan Resume</a>
+        <div class="hero-content">
+          <!-- Left side content -->
+          <div class="hero-left">
+            <div class="eyebrow">
+              <span class="eyebrow-dot"></span>Full Stack Developer & Co-Founder
+            </div>
+            <h1>
+              <span class="h1-line1">Aryan Singh</span>
+              <span class="h1-line2">Bhadoria.</span>
+            </h1>
+            <p class="hero-sub">
+              I build production-grade systems that ship, scale, and get adopted. Co-Founder at <strong>Tokenistt</strong>.
+              Published Researcher in AI Governance. Expert in reducing LLM token costs by <strong>31%</strong>.
+            </p>
+            <div class="waitlist-form">
+              <div class="input-group" style="justify-content: flex-start; flex-direction: row; flex-wrap: wrap;">
+                <a href="mailto:aryanbhadoria100@gmail.com" class="submit-btn" id="emailMeBtn"
+                  style="text-decoration: none; text-align: center;">Email Me</a>
+                <a href="https://tokenistt.com/" target="_blank" class="email-input"
+                  style="text-decoration: none; text-align: center; display: inline-block;">Tokenistt.com</a>
+                <a href="Aryan resume.pdf" download class="email-input"
+                  style="text-decoration: none; text-align: center; display: inline-block;">Aryan Resume</a>
+              </div>
+            </div>
+            <div class="stats">
+              <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Hackathons</span></div>
+              <div class="stat-divider"></div>
+              <div class="stat"><span class="stat-num">31%</span><span class="stat-label">Token Reduction</span></div>
+              <div class="stat-divider"></div>
+              <div class="stat"><span class="stat-num">2</span><span class="stat-label">Live Apps</span></div>
+            </div>
           </div>
-        </div>
-        <div class="stats">
-          <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Hackathons</span></div>
-          <div class="stat-divider"></div>
-          <div class="stat"><span class="stat-num">31%</span><span class="stat-label">Token Reduction</span></div>
-          <div class="stat-divider"></div>
-          <div class="stat"><span class="stat-num">2</span><span class="stat-label">Live Apps</span></div>
+          <!-- Right side photo -->
+          <div class="hero-right">
+            <div class="hero-photo-wrapper">
+              <img src="aryan_photo.jpg" alt="Aryan Singh Bhadoria" class="hero-photo">
+            </div>
+          </div>
         </div>
       </div>
 
