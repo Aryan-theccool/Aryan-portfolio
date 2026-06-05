@@ -1077,6 +1077,80 @@
       }
     }
 
+    /* Achievements & Leadership Section */
+    .achievements-section {
+      max-width: 1000px;
+      width: 100%;
+      margin-bottom: 64px;
+    }
+
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      width: 100%;
+      margin-top: 32px;
+    }
+
+    .achievement-card {
+      padding: 28px 24px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.01);
+      backdrop-filter: blur(8px);
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      position: relative;
+      overflow: hidden;
+      animation: gentle-float 7s ease-in-out infinite;
+    }
+
+    .achievement-card:nth-child(2n) {
+      animation-delay: 2s;
+      animation-duration: 8s;
+    }
+
+    .achievement-card:nth-child(3n) {
+      animation-delay: 4s;
+      animation-duration: 9s;
+    }
+
+    .achievement-card:hover {
+      animation-play-state: paused;
+      border-color: rgba(0, 112, 255, 0.4);
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 112, 255, 0.12),
+                  0 0 20px rgba(0, 112, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .achievement-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      background: rgba(0, 112, 255, 0.1);
+      border: 1px solid rgba(0, 112, 255, 0.2);
+      padding: 4px 12px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .achievement-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .achievement-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.55);
+    }
+
     /* Toast Notification */
     .toast {
       position: fixed;
@@ -1147,6 +1221,7 @@
         <a href="#about" class="nav-link">About</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#experience" class="nav-link">Experience</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
         <a href="#contact" class="nav-link">Contact</a>
         <div class="nav-badge">available for internships</div>
       </div>
@@ -1322,6 +1397,53 @@
             <div class="exp-title">Class 10th (Secondary)</div>
             <div class="exp-company">91.4%</div>
             <div class="exp-desc">Awarded for academic excellence in core subjects.</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="achievements" class="achievements-section reveal">
+        <h2 class="section-title">Achievements & Leadership</h2>
+        <div class="achievements-grid">
+          <!-- AWS Hackathon -->
+          <div class="achievement-card">
+            <span class="achievement-badge">🏆 Hackathon</span>
+            <h3 class="achievement-title">Top 5 National Rank</h3>
+            <p class="achievement-desc">Placed in the Top 5 at the AWS AI for Bharat Hackathon, competing against 1,000+ teams across the nation.</p>
+          </div>
+          
+          <!-- Void Hack -->
+          <div class="achievement-card">
+            <span class="achievement-badge">🥈 Runner-Up</span>
+            <h3 class="achievement-title">Void Hack 7.0</h3>
+            <p class="achievement-desc">Secured Runner-Up position in the Full Stack track at the 24-hour national hackathon.</p>
+          </div>
+
+          <!-- IISF Government -->
+          <div class="achievement-card">
+            <span class="achievement-badge">🏛️ Government</span>
+            <h3 class="achievement-title">IISF Gov Hackathon</h3>
+            <p class="achievement-desc">Recognized as a National Finalist at the prestigious IISF Government Hackathon in Chandigarh.</p>
+          </div>
+
+          <!-- Volleyball Captain -->
+          <div class="achievement-card">
+            <span class="achievement-badge">🏐 Captain</span>
+            <h3 class="achievement-title">Volleyball Champion</h3>
+            <p class="achievement-desc">Captained the team to the Inter-School Championship & Inter-House victory, leading 12 members under high-pressure scenarios.</p>
+          </div>
+
+          <!-- Cricket Captain -->
+          <div class="achievement-card">
+            <span class="achievement-badge">🏏 Captain</span>
+            <h3 class="achievement-title">Cricket Winner</h3>
+            <p class="achievement-desc">Led the House Cricket Team as Captain to tournament victory in the annual sports event.</p>
+          </div>
+
+          <!-- SolveX & VGI Innovik -->
+          <div class="achievement-card">
+            <span class="achievement-badge">⚡ Academic</span>
+            <h3 class="achievement-title">SolveX & Innovik 5.0</h3>
+            <p class="achievement-desc">National Finalist at SolveX Hackathon and secured 4th rank overall in VGI Innovik Hackathon 5.0.</p>
           </div>
         </div>
       </div>
