@@ -1058,6 +1058,46 @@
       color: rgba(255, 255, 255, 0.6);
     }
 
+    .modal-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .modal-btn {
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .modal-btn-primary {
+      background: linear-gradient(135deg, var(--accent), #0040b0);
+      color: #fff;
+    }
+
+    .modal-btn-primary:hover {
+      box-shadow: 0 5px 15px rgba(0, 112, 255, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .modal-btn-secondary {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+    }
+
+    .modal-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .features {
@@ -1646,13 +1686,16 @@
       },
       inkspace: {
         title: "Inkspace — Infinite Collaborative Whiteboard",
-        desc: "A premium real-time collaborative infinite-canvas whiteboard application. Built with Next.js 14, Tailwind, and Liveblocks managed WebSockets. Features low-latency multiplayer synchronization, custom screen-to-world coordinate mapping mathematics, an optimized freehand canvas draw loop using requestAnimationFrame, and hand-drawn styling utilizing RoughJS. Uses Zustand stores to bypass React's component re-render bottleneck during continuous stroke updates."
+        desc: "A premium real-time collaborative infinite-canvas whiteboard application. Built with Next.js 14, Tailwind, and Liveblocks managed WebSockets. Features low-latency multiplayer synchronization, custom screen-to-world coordinate mapping mathematics, an optimized freehand canvas draw loop using requestAnimationFrame, and hand-drawn styling utilizing RoughJS. Uses Zustand stores to bypass React's component re-render bottleneck during continuous stroke updates.",
+        liveUrl: "https://task-eight-psi-64.vercel.app/",
+        githubUrl: "https://github.com/Aryan-theccool/Big-market-/blob/main/README.md"
       }
     };
 
     const modalOverlay = document.getElementById('modalOverlay');
     const modalTitle = document.getElementById('modalTitle');
     const modalBody = document.getElementById('modalBody');
+    const modalLinks = document.getElementById('modalLinks');
 
     document.querySelectorAll('.project-card').forEach(card => {
       card.addEventListener('click', () => {
@@ -1660,6 +1703,26 @@
         const data = projectData[id];
         modalTitle.innerText = data.title;
         modalBody.innerText = data.desc;
+        
+        // Render buttons dynamically
+        modalLinks.innerHTML = '';
+        if (data.liveUrl) {
+          const liveBtn = document.createElement('a');
+          liveBtn.href = data.liveUrl;
+          liveBtn.target = '_blank';
+          liveBtn.className = 'modal-btn modal-btn-primary';
+          liveBtn.innerHTML = '🌐 Live Demo';
+          modalLinks.appendChild(liveBtn);
+        }
+        if (data.githubUrl) {
+          const gitBtn = document.createElement('a');
+          gitBtn.href = data.githubUrl;
+          gitBtn.target = '_blank';
+          gitBtn.className = 'modal-btn modal-btn-secondary';
+          gitBtn.innerHTML = '🐙 GitHub Code';
+          modalLinks.appendChild(gitBtn);
+        }
+        
         modalOverlay.classList.add('active');
       });
     });
@@ -1717,6 +1780,7 @@
       <button id="modalClose" class="modal-close">×</button>
       <h2 id="modalTitle" class="modal-title">Project Title</h2>
       <div id="modalBody" class="modal-body">Project details will go here.</div>
+      <div id="modalLinks" class="modal-links"></div>
     </div>
   </div>
 

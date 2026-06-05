@@ -72,6 +72,7 @@ Welcome to the official repository of my premium developer portfolio. I build pr
     *   **Complex Viewport Mathematics**: Custom screen-to-world linear mapping calculations to enable smooth panning, pinch-zooming, and bounding grid alignments.
     *   **Hand-drawn Aesthetic**: Integrates RoughJS pipelines to mimic human sketch inaccuracies.
 *   **Stack**: Next.js 14, React.js, TailwindCSS, Zustand, Yjs, Liveblocks, RoughJS.
+*   **Links**: [Live Demo](https://task-eight-psi-64.vercel.app/) | [GitHub Repository](https://github.com/Aryan-theccool/Big-market-/blob/main/README.md)
 
 ---
 
