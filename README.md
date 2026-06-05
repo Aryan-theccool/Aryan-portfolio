@@ -60,15 +60,11 @@ Welcome to the official repository of my premium developer portfolio. I build pr
 *   **Key Features**: Voice-to-text digitization of elder narratives and smart-contract-based royalty distributions giving **80% direct royalty back** to tribal communities.
 *   **Stack**: AWS Bedrock, AWS Transcribe, Ethereum Smart Contracts, Solidity.
 
-### 4. NeuronHire — AI-Driven Developer Hiring
-*   **Description**: An advanced technical hiring platform matching clients and developers based on rigorous semantic analysis of technical requirements and past project telemetry.
-*   **Stack**: Node.js, React, NLP Matching Pipelines.
-
-### 5. RealtimeGuard — Blockchain Fraud AI
+### 4. RealtimeGuard — Blockchain Fraud AI
 *   **Description**: Financial transaction monitor operating with sub-second latency to prevent fraud, money laundering (PMLA compliance), structuring, CTR, and velocity spikes.
 *   **Stack**: Ethereum Audits, Node.js, PostgreSQL.
 
-### 6. Inkspace — Infinite Collaborative Whiteboard
+### 5. Inkspace — Infinite Collaborative Whiteboard
 *   **Description**: A premium, real-time collaborative infinite-canvas whiteboard application. It enables users to brainstorm, diagram, and build dynamic workflows (like system architectures, roadmap kanbans, or mind maps) with low-latency multiplayer synchronization.
 *   **Key Features**:
     *   **Low-latency Multiplayer Sync**: Managed WebSockets utilizing the Liveblocks Yjs provider and Conflict-Free Replicated Data Types (Yjs CRDTs).
