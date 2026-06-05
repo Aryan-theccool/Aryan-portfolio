@@ -75,6 +75,18 @@ Welcome to the official repository of my premium developer portfolio. I build pr
 
 ---
 
+## 🏆 Achievements & Leadership
+
+*   **Top 5 National Rank — AWS AI for Bharat Hackathon**: Placed in the top 5 nationwide competing against over 1,000 teams.
+*   **Runner-Up — Void Hack 7.0**: Finished 2nd place in the Full Stack track at this 24-hour national hackathon.
+*   **National Finalist — IISF Government Hackathon**: Reached the final stage of the Chandigarh-based government initiative.
+*   **National Finalist — SolveX Hackathon**: Qualified as a national finalist.
+*   **4th Place — VGI Innovik Hackathon 5.0**: Secured 4th place at the national level event.
+*   **Inter-House & Inter-School Volleyball Champion (Captain)**: Led the volleyball team to championship victory, captaining 12 members.
+*   **Inter-House Cricket Champion (Captain)**: Captained the house cricket team to victory in the tournament.
+
+---
+
 ## 🎨 Portfolio Architecture & Interactive Features
 
 This portfolio is hand-coded to achieve maximum runtime performance (**100/100 Lighthouse Performance Index**) by avoiding heavy framework layers while rendering complex fluid UI elements.
