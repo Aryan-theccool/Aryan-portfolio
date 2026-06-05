@@ -41,32 +41,6 @@
       color: #fff;
       background-color: var(--bg);
       overflow-x: hidden;
-      cursor: none;
-    }
-
-    /* Custom Cursor */
-    .cursor {
-      width: 8px;
-      height: 8px;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: transform 0.05s ease;
-    }
-
-    .cursor-ring {
-      width: 36px;
-      height: 36px;
-      border: 1.5px solid rgba(255, 255, 255, 0.3);
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      z-index: 9998;
-      transform: translate(-50%, -50%);
-      transition: left 0.12s ease-out, top 0.12s ease-out;
     }
 
     /* Background Gradient Animation */
@@ -425,7 +399,6 @@
       color: #fff;
       font-size: 15px;
       transition: all 0.2s ease;
-      cursor: none;
     }
 
     .email-input:hover {
@@ -448,7 +421,6 @@
       font-weight: 700;
       font-size: 15px;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      cursor: none;
       white-space: nowrap;
       transition: transform 0.15s, box-shadow 0.2s;
     }
@@ -1141,8 +1113,6 @@
 </head>
 
 <body>
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
 
   <!-- Gradient Background (FIXED: no React setState, uses direct DOM transforms) -->
   <div class="gradient-bg">
@@ -1432,18 +1402,10 @@
     // The original bug: React's setTgX/setTgY were called on every mousemove inside useEffect,
     // causing infinite re-renders. Here we just set transform directly on the DOM element.
     const gPointer = document.getElementById('gPointer');
-    const cursor = document.getElementById('cursor');
-    const cursorRing = document.getElementById('cursorRing');
 
     window.addEventListener('mousemove', (e) => {
       // Gradient pointer - direct DOM update, no state loop
       gPointer.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-
-      // Custom cursor
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-      cursorRing.style.left = e.clientX + 'px';
-      cursorRing.style.top = e.clientY + 'px';
     });
 
     // === INTERACTIVE TERMINAL LOGIC ===
