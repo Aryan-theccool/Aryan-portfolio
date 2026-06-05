@@ -1066,6 +1066,39 @@
         flex-direction: column;
       }
     }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: rgba(10, 12, 16, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 112, 255, 0.3);
+      padding: 14px 24px;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 9999;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 10px 30px rgba(0, 112, 255, 0.2);
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .toast-icon {
+      color: var(--accent);
+      font-size: 16px;
+    }
   </style>
 </head>
 
@@ -1126,7 +1159,7 @@
         </p>
         <div class="waitlist-form">
           <div class="input-group" style="justify-content: center; flex-direction: row; flex-wrap: wrap;">
-            <a href="mailto:aryanbhadoria100@gmail.com" class="submit-btn"
+            <a href="mailto:aryanbhadoria100@gmail.com" class="submit-btn" id="emailMeBtn"
               style="text-decoration: none; text-align: center;">Email Me</a>
             <a href="https://tokenistt.com/" target="_blank" class="email-input"
               style="text-decoration: none; text-align: center; display: inline-block;">Tokenistt.com</a>
@@ -1539,6 +1572,32 @@
         }
       });
     });
+
+    // === EMAIL COPY TOAST LOGIC ===
+    const emailMeBtn = document.getElementById('emailMeBtn');
+    const toast = document.getElementById('toast');
+
+    if (emailMeBtn) {
+      emailMeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const email = "aryanbhadoria100@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+          // Show toast
+          toast.classList.add('show');
+          setTimeout(() => {
+            toast.classList.remove('show');
+          }, 3000);
+          
+          // Open mailto link after a brief delay
+          setTimeout(() => {
+            window.location.href = `mailto:${email}`;
+          }, 300);
+        }).catch((err) => {
+          // Fallback if clipboard fails
+          window.location.href = `mailto:${email}`;
+        });
+      });
+    }
   </script>
   <div id="modalOverlay" class="modal-overlay">
     <div class="modal-content">
@@ -1546,6 +1605,12 @@
       <h2 id="modalTitle" class="modal-title">Project Title</h2>
       <div id="modalBody" class="modal-body">Project details will go here.</div>
     </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <span class="toast-icon">📧</span>
+    <span>Email copied: aryanbhadoria100@gmail.com</span>
   </div>
 </body>
 
