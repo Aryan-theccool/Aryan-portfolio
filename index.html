@@ -951,12 +951,79 @@
     .about-text strong {
       color: #fff;
     }
-
     /* Contact Form */
     .contact-section {
-      max-width: 600px;
+      max-width: 950px;
       width: 100%;
       margin-bottom: 80px;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 40px;
+      margin-top: 32px;
+      width: 100%;
+    }
+
+    .contact-info-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .contact-info-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contact-info-card:hover {
+      background: rgba(0, 112, 255, 0.04);
+      border-color: rgba(0, 112, 255, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 112, 255, 0.1);
+    }
+
+    .contact-info-icon {
+      font-size: 20px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s;
+    }
+
+    .contact-info-card:hover .contact-info-icon {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      box-shadow: 0 0 15px rgba(0, 112, 255, 0.4);
+    }
+
+    .contact-info-details h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .contact-info-details p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.45);
     }
 
     .contact-form {
@@ -969,6 +1036,13 @@
       border: 1px solid rgba(255, 255, 255, 0.06);
       backdrop-filter: blur(10px);
     }
+
+    @media (max-width: 868px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    } 
 
     .form-row {
       display: grid;
@@ -1761,18 +1835,48 @@
 
       <div id="contact" class="contact-section reveal">
         <h2 class="section-title" style="text-align: center;">Let's Connect</h2>
-        <form class="contact-form" id="contactForm">
-          <div class="form-row">
-            <input type="text" class="form-input" placeholder="Name" required>
-            <input type="email" class="form-input" placeholder="Email" required>
+        <div class="contact-container">
+          <!-- Left Side: Social Panels -->
+          <div class="contact-info-panel">
+            <a href="https://www.linkedin.com/in/aryan-singh-bhadoria-70086a28a/" target="_blank" class="contact-info-card">
+              <div class="contact-info-icon">💼</div>
+              <div class="contact-info-details">
+                <h3>LinkedIn</h3>
+                <p>Connect professionally</p>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/aryanbhadoria_1/" target="_blank" class="contact-info-card">
+              <div class="contact-info-icon">📸</div>
+              <div class="contact-info-details">
+                <h3>Instagram</h3>
+                <p>Follow my journey</p>
+              </div>
+            </a>
+            <a href="mailto:aryanbhadoria100@gmail.com" class="contact-info-card">
+              <div class="contact-info-icon">✉️</div>
+              <div class="contact-info-details">
+                <h3>Email</h3>
+                <p>aryanbhadoria100@gmail.com</p>
+              </div>
+            </a>
           </div>
-          <input type="text" class="form-input" placeholder="Subject" required>
-          <textarea class="form-textarea" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit" class="send-btn" id="sendBtn">Send Message</button>
-        </form>
-        <div id="formSuccess"
-          style="display:none; text-align: center; color: var(--accent); margin-top: 16px; font-weight: 600;">
-          Message sent successfully! I'll get back to you soon.
+          
+          <!-- Right Side: Form -->
+          <div>
+            <form class="contact-form" id="contactForm">
+              <div class="form-row">
+                <input type="text" class="form-input" placeholder="Name" required>
+                <input type="email" class="form-input" placeholder="Email" required>
+              </div>
+              <input type="text" class="form-input" placeholder="Subject" required>
+              <textarea class="form-textarea" rows="5" placeholder="Your Message" required></textarea>
+              <button type="submit" class="send-btn" id="sendBtn">Send Message</button>
+            </form>
+            <div id="formSuccess"
+              style="display:none; text-align: center; color: var(--accent); margin-top: 16px; font-weight: 600;">
+              Message sent successfully! I'll get back to you soon.
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -1803,6 +1907,7 @@
         <a href="https://github.com/Aryan-theccool" target="_blank" class="footer-link">GitHub</a>
         <a href="https://www.linkedin.com/in/aryan-singh-bhadoria-70086a28a/" target="_blank"
           class="footer-link">LinkedIn</a>
+        <a href="https://www.instagram.com/aryanbhadoria_1/" target="_blank" class="footer-link">Instagram</a>
         <a href="https://www.linkedin.com/company/tokenistt" target="_blank" class="footer-link">Tokenistt</a>
       </div>
       <div>Building production-grade systems that ship and scale.</div>
