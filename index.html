@@ -1863,13 +1863,13 @@
           
           <!-- Right Side: Form -->
           <div>
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_FORM_ID" method="POST">
               <div class="form-row">
-                <input type="text" class="form-input" placeholder="Name" required>
-                <input type="email" class="form-input" placeholder="Email" required>
+                <input type="text" name="name" class="form-input" placeholder="Name" required>
+                <input type="email" name="email" class="form-input" placeholder="Email" required>
               </div>
-              <input type="text" class="form-input" placeholder="Subject" required>
-              <textarea class="form-textarea" rows="5" placeholder="Your Message" required></textarea>
+              <input type="text" name="subject" class="form-input" placeholder="Subject" required>
+              <textarea name="message" class="form-textarea" rows="5" placeholder="Your Message" required></textarea>
               <button type="submit" class="send-btn" id="sendBtn">Send Message</button>
             </form>
             <div id="formSuccess"
@@ -1995,21 +1995,45 @@
       observer.observe(el);
     });
 
-    // === CONTACT FORM LOGIC ===
+    // === CONTACT FORM LOGIC (Formspree AJAX) ===
     const contactForm = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
     const sendBtn = document.getElementById('sendBtn');
 
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      
+      if (contactForm.action.includes('YOUR_FORMSPREE_FORM_ID')) {
+        alert('Please configure your Formspree Form ID in index.html (line 1866).');
+        return;
+      }
+
       sendBtn.disabled = true;
       sendBtn.innerText = 'Sending...';
 
-      // Mock sending delay
-      setTimeout(() => {
-        contactForm.style.display = 'none';
-        formSuccess.style.display = 'block';
-      }, 1500);
+      const formData = new FormData(contactForm);
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          contactForm.style.display = 'none';
+          formSuccess.style.display = 'block';
+        } else {
+          const data = await response.json();
+          throw new Error(data.error || 'Submission failed');
+        }
+      } catch (error) {
+        sendBtn.disabled = false;
+        sendBtn.innerText = 'Send Message';
+        alert('Oops! There was a problem submitting your form. Please try again.');
+      }
     });
 
     // === LIVE CLOCK LOGIC ===
