@@ -516,12 +516,50 @@
       border: 1px solid rgba(255, 255, 255, 0.06);
       background: rgba(255, 255, 255, 0.02);
       backdrop-filter: blur(8px);
-      transition: border-color 0.3s, transform 0.2s;
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
     .feature:hover {
       border-color: rgba(0, 112, 255, 0.4);
       transform: translateY(-2px);
+    }
+
+    /* Floating Project Cards */
+    .project-card {
+      animation: gentle-float 6s ease-in-out infinite;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card:nth-child(2n) {
+      animation-delay: 1.5s;
+      animation-duration: 7s;
+    }
+
+    .project-card:nth-child(3n) {
+      animation-delay: 3s;
+      animation-duration: 8s;
+    }
+
+    @keyframes gentle-float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .project-card:hover {
+      animation-play-state: paused;
+      border-color: rgba(0, 112, 255, 0.5);
+      transform: translateY(-16px) scale(1.03) !important;
+      box-shadow: 0 25px 50px rgba(0, 112, 255, 0.15),
+                  0 0 20px rgba(0, 112, 255, 0.1);
+      background: rgba(255, 255, 255, 0.04);
+      cursor: pointer;
     }
 
     .feature-icon {
@@ -1198,11 +1236,6 @@
       <div id="projects" class="reveal">
         <h2 class="section-title">High-Impact Projects</h2>
         <div class="features">
-          <div class="feature project-card" data-project="neuronhire">
-            <span class="feature-icon">🚀</span>
-            <div class="feature-title">NeuronHire — AI Hiring</div>
-            <div class="feature-desc">AI-powered hiring platform matching developers with the right projects via intelligent requirement analysis.</div>
-          </div>
           <div class="feature project-card" data-project="dharohar">
             <span class="feature-icon">🏛️</span>
             <div class="feature-title">Dharohar — Heritage Protection</div>
@@ -1224,7 +1257,7 @@
           <div class="feature project-card" data-project="tokenistt">
             <span class="feature-icon">🤖</span>
             <div class="feature-title">Tokenistt Intelligence</div>
-            <div class="feature-desc">Co-Founder & Lead Dev. MCP server & VS Code extension saving developers up to 96%
+            <div class="feature-desc">Co-Founder & Lead Dev. MCP server & VS Code extension saving developers up to 31%
               on Claude API costs.</div>
           </div>
           <div class="feature project-card" data-project="inkspace">
@@ -1511,10 +1544,6 @@
 
     // === PROJECT MODAL LOGIC ===
     const projectData = {
-      neuronhire: {
-        title: "NeuronHire — AI Hiring",
-        desc: "An AI-powered hiring and workflow platform designed to solve client-developer mismatches. Features AI-driven requirement analysis, developer matching, and workflow tracking. Built with TypeScript and Node.js."
-      },
       dharohar: {
         title: "Dharohar — Heritage Protection",
         desc: "AWS AI for Bharat Hackathon National Finalist. Digitizing India's traditional knowledge to prevent biopiracy using AWS Transcribe, Bedrock, and an immutable ledger. Direct community royalty system built on smart contracts."
