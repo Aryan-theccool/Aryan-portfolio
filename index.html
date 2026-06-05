@@ -483,69 +483,138 @@
     }
 
     .feature {
-      padding: 28px 24px;
+      padding: 0;
       border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      background: rgba(255, 255, 255, 0.02);
-      backdrop-filter: blur(8px);
-      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      border: none;
+      background: transparent;
+      backdrop-filter: none;
+      transition: none;
     }
 
     .feature:hover {
-      border-color: rgba(0, 112, 255, 0.4);
-      transform: translateY(-2px);
+      border-color: transparent;
+      transform: none;
     }
 
-    /* Floating Project Cards */
-    .project-card {
+    /* ====== FLIP CARD SYSTEM ====== */
+    .flip-card {
+      perspective: 1000px;
+      height: 240px;
       animation: gentle-float 6s ease-in-out infinite;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
-    .project-card:nth-child(2n) {
-      animation-delay: 1.5s;
-      animation-duration: 7s;
-    }
+    .flip-card:nth-child(2n) { animation-delay: 1.5s; animation-duration: 7s; }
+    .flip-card:nth-child(3n) { animation-delay: 3s; animation-duration: 8s; }
 
-    .project-card:nth-child(3n) {
-      animation-delay: 3s;
-      animation-duration: 8s;
-    }
-
-    @keyframes gentle-float {
-      0% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-8px);
-      }
-      100% {
-        transform: translateY(0px);
-      }
-    }
-
-    .project-card:hover {
+    .flip-card:hover {
       animation-play-state: paused;
-      border-color: rgba(0, 112, 255, 0.5);
-      transform: translateY(-16px) scale(1.03) !important;
-      box-shadow: 0 25px 50px rgba(0, 112, 255, 0.15),
-                  0 0 20px rgba(0, 112, 255, 0.1);
-      background: rgba(255, 255, 255, 0.04);
-      cursor: pointer;
     }
 
-    .feature-icon {
-      font-size: 28px;
-      display: block;
-      margin-bottom: 16px;
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
     }
 
-    .feature-title {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      padding: 26px 24px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .flip-card-back {
+      background: linear-gradient(135deg, rgba(0, 50, 120, 0.8), rgba(0, 20, 60, 0.9));
+      border: 1px solid rgba(0, 112, 255, 0.35);
+      backdrop-filter: blur(12px);
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 14px;
+      box-shadow: 0 20px 50px rgba(0, 112, 255, 0.15);
+    }
+
+    .flip-back-label {
+      font-size: 11px;
       font-weight: 700;
-      font-size: 17px;
-      letter-spacing: -0.01em;
-      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: rgba(0, 190, 255, 0.7);
+    }
+
+    .flip-back-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .flip-back-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .flip-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      transition: all 0.2s ease;
+      color: #fff;
+    }
+
+    .flip-link-primary {
+      background: rgba(0, 112, 255, 0.6);
+      border: 1px solid rgba(0, 150, 255, 0.5);
+    }
+
+    .flip-link-primary:hover {
+      background: rgba(0, 112, 255, 0.85);
+      transform: translateX(4px);
+    }
+
+    .flip-link-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .flip-link-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateX(4px);
+    }
+
+    .flip-cta {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+      margin-top: auto;
     }
 
     .feature-desc {
@@ -1098,49 +1167,6 @@
       transform: translateY(-1px);
     }
 
-    .project-links {
-      display: flex;
-      gap: 10px;
-      margin-top: 18px;
-      position: relative;
-      z-index: 5;
-    }
-
-    .project-link-btn {
-      padding: 6px 12px;
-      font-size: 12px;
-      font-weight: 700;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: all 0.2s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .project-link-btn:not(.project-link-secondary) {
-      background: var(--accent);
-      color: #fff;
-    }
-
-    .project-link-btn:not(.project-link-secondary):hover {
-      background: #0056cc;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 112, 255, 0.3);
-    }
-
-    .project-link-secondary {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: #fff;
-    }
-
-    .project-link-secondary:hover {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-2px);
-    }
-
     /* Responsive */
     @media (max-width: 768px) {
       .features {
@@ -1364,42 +1390,103 @@
       <div id="projects" class="reveal">
         <h2 class="section-title">High-Impact Projects</h2>
         <div class="features">
-          <div class="feature project-card" data-project="dharohar">
-            <span class="feature-icon">🏛️</span>
-            <div class="feature-title">Dharohar — Heritage Protection</div>
-            <div class="feature-desc">AWS AI National Finalist. Digitizing India's traditional knowledge to prevent
-              biopiracy with 80% direct royalty.</div>
-          </div>
-          <div class="feature project-card" data-project="astitva">
-            <span class="feature-icon">🌿</span>
-            <div class="feature-title">Astitva — FRA Governance</div>
-            <div class="feature-desc">Published AI platform for Forest Rights Act implementation. 89.2% accuracy in
-              processing 15,000 claims.</div>
-          </div>
-          <div class="feature project-card" data-project="realtimeguard">
-            <span class="feature-icon">🛡️</span>
-            <div class="feature-title">RealtimeGuard — Fraud AI</div>
-            <div class="feature-desc">Blockchain-secured financial monitoring with sub-second latency and PMLA
-              compliance.</div>
-          </div>
-          <div class="feature project-card" data-project="tokenistt">
-            <span class="feature-icon">🤖</span>
-            <div class="feature-title">Tokenistt Intelligence</div>
-            <div class="feature-desc">Co-Founder & Lead Dev. MCP server & VS Code extension saving developers up to 31%
-              on Claude API costs.</div>
-            <div class="project-links">
-              <a href="https://tokenistt.com" target="_blank" class="project-link-btn" onclick="event.stopPropagation();">🌐 Live Site</a>
+
+          <!-- Dharohar -->
+          <div class="feature flip-card" data-project="dharohar">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <span class="feature-icon">🏛️</span>
+                <div class="feature-title">Dharohar — Heritage Protection</div>
+                <div class="feature-desc">AWS AI National Finalist. Digitizing India's traditional knowledge to prevent biopiracy with 80% direct royalty.</div>
+              </div>
+              <div class="flip-card-back">
+                <span class="flip-back-label">AWS Finalist</span>
+                <div class="flip-back-title">Dharohar</div>
+                <div class="flip-back-links">
+                  <a class="flip-link flip-link-primary project-card" data-project="dharohar" onclick="openModal('dharohar')" style="cursor:pointer">📖 View Details</a>
+                </div>
+                <span class="flip-cta">AWS Bedrock · Blockchain · React</span>
+              </div>
             </div>
           </div>
-          <div class="feature project-card" data-project="inkspace">
-            <span class="feature-icon">🎨</span>
-            <div class="feature-title">Inkspace — Infinite Whiteboard</div>
-            <div class="feature-desc">Real-time collaborative infinite canvas with custom screen-to-world math, Yjs multiplayer sync, and hand-drawn styling.</div>
-            <div class="project-links">
-              <a href="https://task-eight-psi-64.vercel.app/" target="_blank" class="project-link-btn" onclick="event.stopPropagation();">🌐 Live Demo</a>
-              <a href="https://github.com/Aryan-theccool/Big-market-/blob/main/README.md" target="_blank" class="project-link-btn project-link-secondary" onclick="event.stopPropagation();">🐙 Code</a>
+
+          <!-- Astitva -->
+          <div class="feature flip-card" data-project="astitva">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <span class="feature-icon">🌿</span>
+                <div class="feature-title">Astitva — FRA Governance</div>
+                <div class="feature-desc">Published AI platform for Forest Rights Act implementation. 89.2% accuracy in processing 15,000 claims.</div>
+              </div>
+              <div class="flip-card-back">
+                <span class="flip-back-label">IJAITR Vol. 3</span>
+                <div class="flip-back-title">Astitva</div>
+                <div class="flip-back-links">
+                  <a class="flip-link flip-link-primary" onclick="openModal('astitva')" style="cursor:pointer">📖 View Details</a>
+                </div>
+                <span class="flip-cta">OCR · BERT · GIS Mapping</span>
+              </div>
             </div>
           </div>
+
+          <!-- RealtimeGuard -->
+          <div class="feature flip-card" data-project="realtimeguard">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <span class="feature-icon">🛡️</span>
+                <div class="feature-title">RealtimeGuard — Fraud AI</div>
+                <div class="feature-desc">Blockchain-secured financial monitoring with sub-second latency and PMLA compliance.</div>
+              </div>
+              <div class="flip-card-back">
+                <span class="flip-back-label">Fintech</span>
+                <div class="flip-back-title">RealtimeGuard</div>
+                <div class="flip-back-links">
+                  <a class="flip-link flip-link-primary" onclick="openModal('realtimeguard')" style="cursor:pointer">📖 View Details</a>
+                </div>
+                <span class="flip-cta">Node.js · WebSockets · Ethereum</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tokenistt -->
+          <div class="feature flip-card" data-project="tokenistt">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <span class="feature-icon">🤖</span>
+                <div class="feature-title">Tokenistt Intelligence</div>
+                <div class="feature-desc">Co-Founder & Lead Dev. MCP server & VS Code extension saving developers up to 31% on Claude API costs.</div>
+              </div>
+              <div class="flip-card-back">
+                <span class="flip-back-label">Co-Founded</span>
+                <div class="flip-back-title">Tokenistt</div>
+                <div class="flip-back-links">
+                  <a href="https://tokenistt.com" target="_blank" class="flip-link flip-link-primary">🌐 tokenistt.com</a>
+                </div>
+                <span class="flip-cta">MCP · Node.js · Claude API</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inkspace -->
+          <div class="feature flip-card" data-project="inkspace">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <span class="feature-icon">🎨</span>
+                <div class="feature-title">Inkspace — Infinite Whiteboard</div>
+                <div class="feature-desc">Real-time collaborative infinite canvas with custom screen-to-world math, Yjs multiplayer sync, and hand-drawn styling.</div>
+              </div>
+              <div class="flip-card-back">
+                <span class="flip-back-label">Live Project</span>
+                <div class="flip-back-title">Inkspace</div>
+                <div class="flip-back-links">
+                  <a href="https://task-eight-psi-64.vercel.app/" target="_blank" class="flip-link flip-link-primary">🌐 Live Demo</a>
+                  <a href="https://github.com/Aryan-theccool/Big-market-/blob/main/README.md" target="_blank" class="flip-link flip-link-secondary">🐙 GitHub Code</a>
+                </div>
+                <span class="flip-cta">Next.js · Liveblocks · Yjs</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -1747,6 +1834,30 @@
     const modalTitle = document.getElementById('modalTitle');
     const modalBody = document.getElementById('modalBody');
     const modalLinks = document.getElementById('modalLinks');
+
+    // Global helper so flip-card back buttons can trigger modals
+    function openModal(id) {
+      const data = projectData[id];
+      if (!data) return;
+      modalTitle.innerText = data.title;
+      modalBody.innerText = data.desc;
+      modalLinks.innerHTML = '';
+      if (data.liveUrl) {
+        const liveBtn = document.createElement('a');
+        liveBtn.href = data.liveUrl; liveBtn.target = '_blank';
+        liveBtn.className = 'modal-btn modal-btn-primary';
+        liveBtn.innerHTML = '🌐 Live Demo';
+        modalLinks.appendChild(liveBtn);
+      }
+      if (data.githubUrl) {
+        const gitBtn = document.createElement('a');
+        gitBtn.href = data.githubUrl; gitBtn.target = '_blank';
+        gitBtn.className = 'modal-btn modal-btn-secondary';
+        gitBtn.innerHTML = '🐙 GitHub Code';
+        modalLinks.appendChild(gitBtn);
+      }
+      modalOverlay.classList.add('active');
+    }
 
     document.querySelectorAll('.project-card').forEach(card => {
       card.addEventListener('click', () => {
