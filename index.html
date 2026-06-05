@@ -1098,6 +1098,49 @@
       transform: translateY(-1px);
     }
 
+    .project-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .project-link-btn {
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .project-link-btn:not(.project-link-secondary) {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .project-link-btn:not(.project-link-secondary):hover {
+      background: #0056cc;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 112, 255, 0.3);
+    }
+
+    .project-link-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    .project-link-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .features {
@@ -1349,6 +1392,10 @@
             <span class="feature-icon">🎨</span>
             <div class="feature-title">Inkspace — Infinite Whiteboard</div>
             <div class="feature-desc">Real-time collaborative infinite canvas with custom screen-to-world math, Yjs multiplayer sync, and hand-drawn styling.</div>
+            <div class="project-links">
+              <a href="https://task-eight-psi-64.vercel.app/" target="_blank" class="project-link-btn" onclick="event.stopPropagation();">🌐 Live Demo</a>
+              <a href="https://github.com/Aryan-theccool/Big-market-/blob/main/README.md" target="_blank" class="project-link-btn project-link-secondary" onclick="event.stopPropagation();">🐙 Code</a>
+            </div>
           </div>
         </div>
       </div>
