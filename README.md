@@ -48,6 +48,7 @@ Welcome to the official repository of my premium developer portfolio. I build pr
 *   **Description**: A token intelligence and optimization platform for Claude API developers. It consists of an **MCP server** and a **VS Code Extension** that performs exact token calculations, cost predictions, and prompt compression before queries hit the provider.
 *   **Key Achievement**: Empowered developers to count and manage prompt tokens, reducing average query costs by **up to 31%**.
 *   **Stack**: Node.js, Claude API, MCP Protocol, TypeScript.
+*   **Links**: [Live Site](https://tokenistt.com)
 
 ### 2. Astitva — Forest Rights Act (FRA) AI Governance
 *   **Description**: A comprehensive platform built to simplify, digitize, and automate claims under India's Forest Rights Act. Integrates OCR scanners, document classification networks, and geographical mapping tools to verify land claims.
