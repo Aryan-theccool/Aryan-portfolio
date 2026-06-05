@@ -24,7 +24,7 @@ Welcome to the official repository of my premium developer portfolio. I build pr
 
 ## ⚡ High-Impact Accomplishments at a Glance
 
-*   **96% LLM Token Cost Reduction**: Developed custom MCP servers and prompt compression layers to compress Claude API context windows.
+*   **31% LLM Token Cost Reduction**: Developed custom MCP servers and prompt compression layers to compress Claude API context windows.
 *   **Published AI Governance Platform**: Author of *"Astitva: AI-Powered FRA Governance Platform"* in **IJAITR Vol. 3** for automating land claim processing with **89.2% accuracy**.
 *   **AWS AI for Bharat Hackathon Finalist**: Designed and implemented *Dharohar* to safeguard indigenous traditional knowledge using AWS Bedrock and blockchain ledger audits.
 
@@ -46,7 +46,7 @@ Welcome to the official repository of my premium developer portfolio. I build pr
 
 ### 1. Tokenistt Intelligence — Co-Founder & Lead Developer
 *   **Description**: A token intelligence and optimization platform for Claude API developers. It consists of an **MCP server** and a **VS Code Extension** that performs exact token calculations, cost predictions, and prompt compression before queries hit the provider.
-*   **Key Achievement**: Empowered developers to count and manage prompt tokens, reducing average query costs by **up to 96%**.
+*   **Key Achievement**: Empowered developers to count and manage prompt tokens, reducing average query costs by **up to 31%**.
 *   **Stack**: Node.js, Claude API, MCP Protocol, TypeScript.
 
 ### 2. Astitva — Forest Rights Act (FRA) AI Governance
