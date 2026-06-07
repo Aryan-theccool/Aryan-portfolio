@@ -1104,6 +1104,11 @@
       <div id="projects" class="reveal">
         <h2 class="section-title">High-Impact Projects</h2>
         <div class="features">
+          <div class="feature project-card" data-project="resumeeditor">
+            <span class="feature-icon">✍️</span>
+            <div class="feature-title">Local AI LaTeX Resume Editor</div>
+            <div class="feature-desc">AI-powered LaTeX Resume Editor featuring a sleek glassmorphic UI, surgical regex fast-path routing, and offline local LLMs via Ollama.</div>
+          </div>
           <div class="feature project-card" data-project="neuronhire">
             <span class="feature-icon">🚀</span>
             <div class="feature-title">NeuronHire — AI Hiring</div>
@@ -1424,6 +1429,10 @@
 
     // === PROJECT MODAL LOGIC ===
     const projectData = {
+      resumeeditor: {
+        title: "Local AI LaTeX Resume Editor",
+        desc: "A premium, local-first, AI-powered LaTeX Resume Editor featuring a sleek glassmorphic UI and a hybrid execution engine. It integrates FastAPI, Vanilla HTML5/CSS3/JS, and Ollama (local LLMs). Processes simple targeted edits (like adding skills, bolding text) instantly using surgical regex pattern-matching (under a millisecond) and falls back to local LLMs (mistral, phi3:mini) running offline for complex resume rewriting, ATS optimization, summarization, or career tailoring. Features modular version history with undo/reset capability, dual loading mechanisms (.tex upload or raw copy-paste), and name-persistent export."
+      },
       neuronhire: {
         title: "NeuronHire — AI Hiring",
         desc: "An AI-powered hiring and workflow platform designed to solve client-developer mismatches. Features AI-driven requirement analysis, developer matching, and workflow tracking. Built with TypeScript and Node.js."

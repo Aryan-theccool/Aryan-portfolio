@@ -1625,6 +1625,26 @@
         <h2 class="section-title">High-Impact Projects</h2>
         <div class="features">
 
+          <!-- Local AI LaTeX Resume Editor -->
+          <div class="feature flip-card" data-project="resumeeditor">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <span class="feature-icon">✍️</span>
+                <div class="feature-title">Local AI LaTeX Resume Editor</div>
+                <div class="feature-desc">AI-powered LaTeX Resume Editor featuring a sleek glassmorphic UI, surgical regex fast-path routing, and offline local LLMs via Ollama.</div>
+              </div>
+              <div class="flip-card-back">
+                <span class="flip-back-label">Local AI</span>
+                <div class="flip-back-title">Resume Editor</div>
+                <div class="flip-back-links">
+                  <a href="https://github.com/Aryan-theccool/Resume-editor" target="_blank" class="flip-link flip-link-primary">🐙 GitHub Code</a>
+                  <a class="flip-link flip-link-secondary project-card" data-project="resumeeditor" onclick="openModal('resumeeditor')" style="cursor:pointer">📖 View Details</a>
+                </div>
+                <span class="flip-cta">FastAPI · Ollama · Vanilla JS</span>
+              </div>
+            </div>
+          </div>
+
           <!-- Dharohar -->
           <div class="feature flip-card" data-project="dharohar">
             <div class="flip-card-inner">
@@ -2094,6 +2114,11 @@
 
     // === PROJECT MODAL LOGIC ===
     const projectData = {
+      resumeeditor: {
+        title: "Local AI LaTeX Resume Editor",
+        desc: "A premium, local-first, AI-powered LaTeX Resume Editor featuring a sleek glassmorphic UI and a hybrid execution engine. It integrates FastAPI, Vanilla HTML5/CSS3/JS, and Ollama (local LLMs). Processes simple targeted edits (like adding skills, bolding text) instantly using surgical regex pattern-matching (under a millisecond) and falls back to local LLMs (mistral, phi3:mini) running offline for complex resume rewriting, ATS optimization, summarization, or career tailoring. Features modular version history with undo/reset capability, dual loading mechanisms (.tex upload or raw copy-paste), and name-persistent export.",
+        githubUrl: "https://github.com/Aryan-theccool/Resume-editor"
+      },
       dharohar: {
         title: "Dharohar — Heritage Protection",
         desc: "AWS AI for Bharat Hackathon National Finalist. Digitizing India's traditional knowledge to prevent biopiracy using AWS Transcribe, Bedrock, and an immutable ledger. Direct community royalty system built on smart contracts."
