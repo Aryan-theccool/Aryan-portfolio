@@ -34,7 +34,7 @@ Welcome to the official repository of my premium developer portfolio. I build pr
 
 | Category | Technologies & Tools |
 | :--- | :--- |
-| **Languages** | C++, JavaScript (ES6+), Python, SQL (PostgreSQL) |
+| **Languages** | C++, JavaScript (ES6+), SQL (PostgreSQL) |
 | **Core Web Stack** | Node.js, React.js, HTML5, Vanilla CSS3 (Glassmorphic Styles) |
 | **AI & Cloud** | AWS Bedrock, AWS Transcribe, Claude API, MCP (Model Context Protocol), NLP (BERT) |
 | **Data & Databases** | PostGIS (GIS), MongoDB, PostgreSQL, Smart Contract Audits |
@@ -45,9 +45,9 @@ Welcome to the official repository of my premium developer portfolio. I build pr
 ## 🚀 High-Impact Projects Featured
 
 ### 1. Tokenistt Intelligence — Co-Founder & Lead Developer
-*   **Description**: A token intelligence and optimization platform for Claude API developers. It consists of an **MCP server** and a **VS Code Extension** that performs exact token calculations, cost predictions, and prompt compression before queries hit the provider.
-*   **Key Achievement**: Empowered developers to count and manage prompt tokens, reducing average query costs by **up to 31%**.
-*   **Stack**: Node.js, Claude API, MCP Protocol, TypeScript.
+*   **Description**: A drop-in OpenAI SDK replacement and gateway proxy featuring FinOps-grade cost tracking, virtual key management, budget enforcement, and intelligent multi-provider routing across Anthropic, AWS Bedrock, and Azure OpenAI.
+*   **Key Achievement**: Empowered developers to control spending and route requests dynamically, reducing average query costs by **up to 31%**.
+*   **Stack**: Node.js, Express, Kafka, ClickHouse, Next.js.
 *   **Links**: [Live Site](https://tokenistt.com)
 
 ### 2. Astitva — Forest Rights Act (FRA) AI Governance
