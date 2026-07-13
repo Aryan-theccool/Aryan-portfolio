@@ -334,7 +334,7 @@
       padding: 6px;
       background: linear-gradient(135deg, #0070ff, #00d4ff);
       box-shadow: 0 0 30px rgba(0, 112, 255, 0.4),
-                  inset 0 0 15px rgba(255, 255, 255, 0.2);
+        inset 0 0 15px rgba(255, 255, 255, 0.2);
       animation: photo-gentle-float 6s ease-in-out infinite;
     }
 
@@ -352,10 +352,12 @@
         transform: translateY(0px) rotate(0deg);
         box-shadow: 0 0 35px rgba(0, 112, 255, 0.4);
       }
+
       50% {
         transform: translateY(-12px) rotate(3deg);
         box-shadow: 0 0 50px rgba(0, 112, 255, 0.6);
       }
+
       100% {
         transform: translateY(0px) rotate(0deg);
         box-shadow: 0 0 35px rgba(0, 112, 255, 0.4);
@@ -571,8 +573,15 @@
       animation: gentle-float 6s ease-in-out infinite;
     }
 
-    .flip-card:nth-child(2n) { animation-delay: 1.5s; animation-duration: 7s; }
-    .flip-card:nth-child(3n) { animation-delay: 3s; animation-duration: 8s; }
+    .flip-card:nth-child(2n) {
+      animation-delay: 1.5s;
+      animation-duration: 7s;
+    }
+
+    .flip-card:nth-child(3n) {
+      animation-delay: 3s;
+      animation-duration: 8s;
+    }
 
     .flip-card:hover {
       animation-play-state: paused;
@@ -734,7 +743,7 @@
       opacity: 1;
     }
 
-    .skill-card > * {
+    .skill-card>* {
       position: relative;
       z-index: 1;
     }
@@ -744,8 +753,8 @@
       border-color: rgba(0, 112, 255, 0.5);
       transform: translateY(-8px);
       box-shadow: 0 20px 40px rgba(0, 112, 255, 0.15),
-                  0 0 25px rgba(0, 112, 255, 0.08),
-                  inset 0 0 15px rgba(0, 112, 255, 0.1);
+        0 0 25px rgba(0, 112, 255, 0.08),
+        inset 0 0 15px rgba(0, 112, 255, 0.1);
     }
 
     .skill-category {
@@ -1004,6 +1013,7 @@
     .about-text strong {
       color: #fff;
     }
+
     /* Contact Form */
     .contact-section {
       max-width: 950px;
@@ -1095,7 +1105,7 @@
         grid-template-columns: 1fr;
         gap: 32px;
       }
-    } 
+    }
 
     .form-row {
       display: grid;
@@ -1458,7 +1468,7 @@
       border-color: rgba(0, 112, 255, 0.4);
       transform: translateY(-12px) scale(1.02);
       box-shadow: 0 20px 40px rgba(0, 112, 255, 0.12),
-                  0 0 20px rgba(0, 112, 255, 0.08);
+        0 0 20px rgba(0, 112, 255, 0.08);
       background: rgba(255, 255, 255, 0.03);
     }
 
@@ -1553,31 +1563,32 @@
   <div style="position:relative;z-index:2">
     <nav>
       <div class="logo">
-        <div class="logo-mark"><svg class="logo-svg" viewBox="0 0 100 100" width="34" height="34" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#00d4ff" />
-              <stop offset="100%" stop-color="#0070ff" />
-            </linearGradient>
-            <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#0c1020" />
-              <stop offset="100%" stop-color="#040507" />
-            </linearGradient>
-            <clipPath id="circleClip">
-              <circle cx="50" cy="50" r="43" />
-            </clipPath>
-          </defs>
-          <circle cx="50" cy="50" r="46" fill="none" stroke="url(#logoGrad)" stroke-width="4" />
-          <g clip-path="url(#circleClip)">
-            <rect width="100" height="100" fill="url(#bgGrad)" />
-            <g transform="rotate(45 50 50)" fill="url(#logoGrad)">
-              <rect x="12" y="-20" width="8" height="140" rx="3" />
-              <rect x="25" y="-20" width="8" height="140" rx="3" />
-              <rect x="38" y="-20" width="8" height="140" rx="3" />
+        <div class="logo-mark"><svg class="logo-svg" viewBox="0 0 100 100" width="34" height="34"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00d4ff" />
+                <stop offset="100%" stop-color="#0070ff" />
+              </linearGradient>
+              <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0c1020" />
+                <stop offset="100%" stop-color="#040507" />
+              </linearGradient>
+              <clipPath id="circleClip">
+                <circle cx="50" cy="50" r="43" />
+              </clipPath>
+            </defs>
+            <circle cx="50" cy="50" r="46" fill="none" stroke="url(#logoGrad)" stroke-width="4" />
+            <g clip-path="url(#circleClip)">
+              <rect width="100" height="100" fill="url(#bgGrad)" />
+              <g transform="rotate(45 50 50)" fill="url(#logoGrad)">
+                <rect x="12" y="-20" width="8" height="140" rx="3" />
+                <rect x="25" y="-20" width="8" height="140" rx="3" />
+                <rect x="38" y="-20" width="8" height="140" rx="3" />
+              </g>
+              <polygon points="55,80 80,80 80,70 72,70 72,45 58,31 50,39 62,51 62,70 55,70" fill="url(#logoGrad)" />
             </g>
-            <polygon points="55,80 80,80 80,70 72,70 72,45 58,31 50,39 62,51 62,70 55,70" fill="url(#logoGrad)" />
-          </g>
-        </svg></div>Aryan Singh Bhadoria
+          </svg></div>Aryan Singh Bhadoria
         <div id="liveClock" class="live-clock">00:00:00 IND</div>
       </div>
       <div class="nav-links">
@@ -1603,7 +1614,8 @@
               <span class="h1-line2">Bhadoria.</span>
             </h1>
             <p class="hero-sub">
-              I build production-grade systems that ship, scale, and get adopted. Co-Founder at <strong>Tokenistt</strong>.
+              I build production-grade systems that ship, scale, and get adopted. Co-Founder at
+              <strong>Tokenistt</strong>.
               Published Researcher in AI Governance. Expert in reducing LLM token costs by <strong>31%</strong>.
             </p>
             <div class="waitlist-form">
@@ -1646,7 +1658,8 @@
           <div class="about-text">
             <p>Beyond Tokenistt, I build AI-driven platforms for social impact, from <strong>FRA Governance</strong> to
               <strong>Heritage Protection</strong>. I bridge the gap between complex legal frameworks and scalable
-              technology.</p>
+              technology.
+            </p>
           </div>
         </div>
       </div>
@@ -1661,14 +1674,17 @@
               <div class="flip-card-front">
                 <span class="feature-icon">✍️</span>
                 <div class="feature-title">Local AI LaTeX Resume Editor</div>
-                <div class="feature-desc">AI-powered LaTeX Resume Editor featuring a sleek glassmorphic UI, surgical regex fast-path routing, and offline local LLMs via Ollama.</div>
+                <div class="feature-desc">AI-powered LaTeX Resume Editor featuring a sleek glassmorphic UI, surgical
+                  regex fast-path routing, and offline local LLMs via Ollama.</div>
               </div>
               <div class="flip-card-back">
                 <span class="flip-back-label">Local AI</span>
                 <div class="flip-back-title">Resume Editor</div>
                 <div class="flip-back-links">
-                  <a href="https://github.com/Aryan-theccool/Resume-editor" target="_blank" class="flip-link flip-link-primary">🐙 GitHub Code</a>
-                  <a class="flip-link flip-link-secondary project-card" data-project="resumeeditor" onclick="openModal('resumeeditor')" style="cursor:pointer">📖 View Details</a>
+                  <a href="https://github.com/Aryan-theccool/Resume-editor" target="_blank"
+                    class="flip-link flip-link-primary">🐙 GitHub Code</a>
+                  <a class="flip-link flip-link-secondary project-card" data-project="resumeeditor"
+                    onclick="openModal('resumeeditor')" style="cursor:pointer">📖 View Details</a>
                 </div>
                 <span class="flip-cta">FastAPI · Ollama · Vanilla JS</span>
               </div>
@@ -1681,13 +1697,15 @@
               <div class="flip-card-front">
                 <span class="feature-icon">🏛️</span>
                 <div class="feature-title">Dharohar — Heritage Protection</div>
-                <div class="feature-desc">AWS AI National Finalist. Digitizing India's traditional knowledge to prevent biopiracy with 80% direct royalty.</div>
+                <div class="feature-desc">AWS AI National Finalist. Digitizing India's traditional knowledge to prevent
+                  biopiracy with 80% direct royalty.</div>
               </div>
               <div class="flip-card-back">
                 <span class="flip-back-label">AWS Finalist</span>
                 <div class="flip-back-title">Dharohar</div>
                 <div class="flip-back-links">
-                  <a class="flip-link flip-link-primary project-card" data-project="dharohar" onclick="openModal('dharohar')" style="cursor:pointer">📖 View Details</a>
+                  <a class="flip-link flip-link-primary project-card" data-project="dharohar"
+                    onclick="openModal('dharohar')" style="cursor:pointer">📖 View Details</a>
                 </div>
                 <span class="flip-cta">AWS Bedrock · Blockchain · React</span>
               </div>
@@ -1700,13 +1718,15 @@
               <div class="flip-card-front">
                 <span class="feature-icon">🌿</span>
                 <div class="feature-title">Astitva — FRA Governance</div>
-                <div class="feature-desc">Published AI platform for Forest Rights Act implementation. 89.2% accuracy in processing 15,000 claims.</div>
+                <div class="feature-desc">Published AI platform for Forest Rights Act implementation. 89.2% accuracy in
+                  processing 15,000 claims.</div>
               </div>
               <div class="flip-card-back">
                 <span class="flip-back-label">IJAITR Vol. 3</span>
                 <div class="flip-back-title">Astitva</div>
                 <div class="flip-back-links">
-                  <a class="flip-link flip-link-primary" onclick="openModal('astitva')" style="cursor:pointer">📖 View Details</a>
+                  <a class="flip-link flip-link-primary" onclick="openModal('astitva')" style="cursor:pointer">📖 View
+                    Details</a>
                 </div>
                 <span class="flip-cta">OCR · BERT · GIS Mapping</span>
               </div>
@@ -1719,13 +1739,15 @@
               <div class="flip-card-front">
                 <span class="feature-icon">🛡️</span>
                 <div class="feature-title">RealtimeGuard — Fraud AI</div>
-                <div class="feature-desc">Blockchain-secured financial monitoring with sub-second latency and PMLA compliance.</div>
+                <div class="feature-desc">Blockchain-secured financial monitoring with sub-second latency and PMLA
+                  compliance.</div>
               </div>
               <div class="flip-card-back">
                 <span class="flip-back-label">Fintech</span>
                 <div class="flip-back-title">RealtimeGuard</div>
                 <div class="flip-back-links">
-                  <a class="flip-link flip-link-primary" onclick="openModal('realtimeguard')" style="cursor:pointer">📖 View Details</a>
+                  <a class="flip-link flip-link-primary" onclick="openModal('realtimeguard')" style="cursor:pointer">📖
+                    View Details</a>
                 </div>
                 <span class="flip-cta">Node.js · WebSockets · Ethereum</span>
               </div>
@@ -1738,13 +1760,15 @@
               <div class="flip-card-front">
                 <span class="feature-icon">🤖</span>
                 <div class="feature-title">Tokenistt Intelligence</div>
-                <div class="feature-desc">Co-Founder & Lead Dev. MCP server & VS Code extension saving developers up to 31% on Claude API costs.</div>
+                <div class="feature-desc">Co-Founder & Lead Dev. MCP server & VS Code extension saving developers up to
+                  31% on Claude API costs.</div>
               </div>
               <div class="flip-card-back">
                 <span class="flip-back-label">Co-Founded</span>
                 <div class="flip-back-title">Tokenistt</div>
                 <div class="flip-back-links">
-                  <a href="https://tokenistt.com" target="_blank" class="flip-link flip-link-primary">🌐 tokenistt.com</a>
+                  <a href="https://tokenistt.com" target="_blank" class="flip-link flip-link-primary">🌐
+                    tokenistt.com</a>
                 </div>
                 <span class="flip-cta">MCP · Node.js · Claude API</span>
               </div>
@@ -1757,14 +1781,17 @@
               <div class="flip-card-front">
                 <span class="feature-icon">🎨</span>
                 <div class="feature-title">Inkspace — Infinite Whiteboard</div>
-                <div class="feature-desc">Real-time collaborative infinite canvas with custom screen-to-world math, Yjs multiplayer sync, and hand-drawn styling.</div>
+                <div class="feature-desc">Real-time collaborative infinite canvas with custom screen-to-world math, Yjs
+                  multiplayer sync, and hand-drawn styling.</div>
               </div>
               <div class="flip-card-back">
                 <span class="flip-back-label">Live Project</span>
                 <div class="flip-back-title">Inkspace</div>
                 <div class="flip-back-links">
-                  <a href="https://task-eight-psi-64.vercel.app/" target="_blank" class="flip-link flip-link-primary">🌐 Live Demo</a>
-                  <a href="https://github.com/Aryan-theccool/Big-market-/blob/main/README.md" target="_blank" class="flip-link flip-link-secondary">🐙 GitHub Code</a>
+                  <a href="https://task-eight-psi-64.vercel.app/" target="_blank" class="flip-link flip-link-primary">🌐
+                    Live Demo</a>
+                  <a href="https://github.com/Aryan-theccool/Big-market-/blob/main/README.md" target="_blank"
+                    class="flip-link flip-link-secondary">🐙 GitHub Code</a>
                 </div>
                 <span class="flip-cta">Next.js · Liveblocks · Yjs</span>
               </div>
@@ -1869,42 +1896,48 @@
           <div class="achievement-card">
             <span class="achievement-badge">🏆 Hackathon</span>
             <h3 class="achievement-title">Top 5 National Rank</h3>
-            <p class="achievement-desc">Placed in the Top 5 at the AWS AI for Bharat Hackathon, competing against 1,000+ teams across the nation.</p>
+            <p class="achievement-desc">Placed in the Top 5 at the AWS AI for Bharat Hackathon, competing against 1,000+
+              teams across the nation.</p>
           </div>
-          
+
           <!-- Void Hack -->
           <div class="achievement-card">
             <span class="achievement-badge">🥈 Runner-Up</span>
             <h3 class="achievement-title">Void Hack 7.0</h3>
-            <p class="achievement-desc">Secured Runner-Up position in the Full Stack track at the 24-hour national hackathon.</p>
+            <p class="achievement-desc">Secured Runner-Up position in the Full Stack track at the 24-hour national
+              hackathon.</p>
           </div>
 
           <!-- IISF Government -->
           <div class="achievement-card">
             <span class="achievement-badge">🏛️ Government</span>
             <h3 class="achievement-title">IISF Gov Hackathon</h3>
-            <p class="achievement-desc">Recognized as a National Finalist at the prestigious IISF Government Hackathon in Chandigarh.</p>
+            <p class="achievement-desc">Recognized as a National Finalist at the prestigious IISF Government Hackathon
+              in Chandigarh.</p>
           </div>
 
           <!-- Volleyball Captain -->
           <div class="achievement-card">
             <span class="achievement-badge">🏐 Captain</span>
             <h3 class="achievement-title">Volleyball Champion</h3>
-            <p class="achievement-desc">Captained the team to the Inter-School Championship & Inter-House victory, leading 12 members under high-pressure scenarios.</p>
+            <p class="achievement-desc">Captained the team to the Inter-School Championship & Inter-House victory,
+              leading 12 members under high-pressure scenarios.</p>
           </div>
 
           <!-- Cricket Captain -->
           <div class="achievement-card">
             <span class="achievement-badge">🏏 Captain</span>
             <h3 class="achievement-title">Cricket Winner</h3>
-            <p class="achievement-desc">Led the House Cricket Team as Captain to tournament victory in the annual sports event.</p>
+            <p class="achievement-desc">Led the House Cricket Team as Captain to tournament victory in the annual sports
+              event.</p>
           </div>
 
           <!-- SolveX & VGI Innovik -->
           <div class="achievement-card">
             <span class="achievement-badge">⚡ Academic</span>
             <h3 class="achievement-title">SolveX & Innovik 5.0</h3>
-            <p class="achievement-desc">National Finalist at SolveX Hackathon and secured 4th rank overall in VGI Innovik Hackathon 5.0.</p>
+            <p class="achievement-desc">National Finalist at SolveX Hackathon and secured 4th rank overall in VGI
+              Innovik Hackathon 5.0.</p>
           </div>
         </div>
       </div>
@@ -1934,7 +1967,8 @@
         <div class="contact-container">
           <!-- Left Side: Social Panels -->
           <div class="contact-info-panel">
-            <a href="https://www.linkedin.com/in/aryan-singh-bhadoria-70086a28a/" target="_blank" class="contact-info-card">
+            <a href="https://www.linkedin.com/in/aryan-singh-bhadoria-70086a28a/" target="_blank"
+              class="contact-info-card">
               <div class="contact-info-icon">💼</div>
               <div class="contact-info-details">
                 <h3>LinkedIn</h3>
@@ -1956,7 +1990,7 @@
               </div>
             </a>
           </div>
-          
+
           <!-- Right Side: Form -->
           <div>
             <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdavaapq" method="POST">
@@ -2098,7 +2132,7 @@
 
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       if (contactForm.action.includes('YOUR_FORMSPREE_FORM_ID')) {
         alert('Please configure your Formspree Form ID in index.html (line 1866).');
         return;
@@ -2209,7 +2243,7 @@
         const data = projectData[id];
         modalTitle.innerText = data.title;
         modalBody.innerText = data.desc;
-        
+
         // Render buttons dynamically
         modalLinks.innerHTML = '';
         if (data.liveUrl) {
@@ -2228,7 +2262,7 @@
           gitBtn.innerHTML = '🐙 GitHub Code';
           modalLinks.appendChild(gitBtn);
         }
-        
+
         modalOverlay.classList.add('active');
       });
     });
@@ -2269,7 +2303,7 @@
           setTimeout(() => {
             toast.classList.remove('show');
           }, 3000);
-          
+
           // Open mailto link after a brief delay
           setTimeout(() => {
             window.location.href = `mailto:${email}`;
