@@ -44,35 +44,49 @@ Welcome to the official repository of my premium developer portfolio. I build pr
 
 ## 🚀 High-Impact Projects Featured
 
-### 1. Tokenistt Intelligence — Co-Founder & Lead Developer
+### 1. Tokenistt — AI Cost Gateway & Governance
 *   **Description**: A drop-in OpenAI SDK replacement and gateway proxy featuring FinOps-grade cost tracking, virtual key management, budget enforcement, and intelligent multi-provider routing across Anthropic, AWS Bedrock, and Azure OpenAI.
-*   **Key Achievement**: Empowered developers to control spending and route requests dynamically, reducing average query costs by **up to 96%**.
 *   **Stack**: Node.js, Express, Kafka, ClickHouse, Next.js.
-*   **Links**: [Live Site](https://tokenistt.com)
+*   **Links**: [Live Gateway](https://tokenistt.com)
 
-### 2. Astitva — Forest Rights Act (FRA) AI Governance
-*   **Description**: A comprehensive platform built to simplify, digitize, and automate claims under India's Forest Rights Act. Integrates OCR scanners, document classification networks, and geographical mapping tools to verify land claims.
-*   **Key Achievement**: Processed over **15,000 tribal claims** with **89.2% accuracy** in pilot deployments.
-*   **Research Paper**: Published in the *International Journal of Advanced Information Technology and Research (IJAITR) Vol. 3*.
-*   **Stack**: Python, BERT NLP, PostGIS (GIS mapping), MongoDB.
+### 2. DeRisk.biz — Governance Risk AI
+*   **Description**: Private AI risk intelligence platform for CXOs to assess and detect corporate governance and internal data exposure vulnerabilities before regulators do.
+*   **Stack**: React, Node.js, Express, OpenAI API.
+*   **Links**: [Live Site](https://derisk-biz.onrender.com/)
 
 ### 3. Dharohar — Traditional Knowledge Protection
 *   **Description**: AWS AI National Finalist platform designed to catalog, verify, and digitize traditional Indian wellness formulations to prevent biopiracy and distribute royalties fairly.
-*   **Key Features**: Voice-to-text digitization of elder narratives and smart-contract-based royalty distributions giving **80% direct royalty back** to tribal communities.
-*   **Stack**: AWS Bedrock, AWS Transcribe, Ethereum Smart Contracts, Solidity.
+*   **Stack**: AWS Bedrock, AWS Transcribe, Ethereum Smart Contracts, Solidity, React.
+*   **Links**: [Live Demo](https://frontend-nine-pink-57.vercel.app/)
 
-### 4. RealtimeGuard — Blockchain Fraud AI
-*   **Description**: Financial transaction monitor operating with sub-second latency to prevent fraud, money laundering (PMLA compliance), structuring, CTR, and velocity spikes.
-*   **Stack**: Ethereum Audits, Node.js, PostgreSQL.
+### 4. RealtimeGuard — Fraud Monitoring & Payments
+*   **Description**: High-throughput financial transaction monitor operating with sub-second latency for PMLA compliance, query audits, and SecureFin X gateway integration.
+*   **Stack**: Node.js, WASM, WebSockets, Ethereum, PostgreSQL.
+*   **Links**: [SecureFin X Demo](https://securefin-x-realtimeguard.vercel.app/) | [Legacy UI Demo](https://realtimeguard-legacy.vercel.app/) (admin/admin)
 
-### 5. Inkspace — Infinite Collaborative Whiteboard
-*   **Description**: A premium, real-time collaborative infinite-canvas whiteboard application. It enables users to brainstorm, diagram, and build dynamic workflows (like system architectures, roadmap kanbans, or mind maps) with low-latency multiplayer synchronization.
-*   **Key Features**:
-    *   **Low-latency Multiplayer Sync**: Managed WebSockets utilizing the Liveblocks Yjs provider and Conflict-Free Replicated Data Types (Yjs CRDTs).
-    *   **Zustand Store Architecture**: Bypasses React's rendering lifecycle via transient store subscriptions to execute rapid vector stroke coordinates at 60fps.
-    *   **Complex Viewport Mathematics**: Custom screen-to-world linear mapping calculations to enable smooth panning, pinch-zooming, and bounding grid alignments.
-    *   **Hand-drawn Aesthetic**: Integrates RoughJS pipelines to mimic human sketch inaccuracies.
-*   **Stack**: Next.js 14, React.js, TailwindCSS, Zustand, Yjs, Liveblocks, RoughJS.
+### 5. Mysha Creation — Premium Fashion E-Commerce
+*   **Description**: A premium direct-to-consumer boutique Indian apparel storefront featuring shoppable reels, curated occasion collections, and secure Razorpay payment integration.
+*   **Stack**: Next.js 14, TailwindCSS, MongoDB, Razorpay API.
+*   **Links**: [Live Site](https://onestoremysha.com)
+
+### 6. AI Resume Screener & Ranking Tool
+*   **Description**: Recruiter-grade candidate screening and ranking application. Parses candidate resumes (PDF/DOCX) using natural language processing and matches capabilities with Job Descriptions via TF-IDF and Cosine Similarity.
+*   **Stack**: React, NLP, PDF/DOCX Parsing.
+*   **Links**: [Live Demo](https://screen-screeing.vercel.app/)
+
+### 7. Local AI LaTeX Resume Editor
+*   **Description**: Offline resume-tailoring editor featuring a glassmorphic UI, FastAPI backend, and local offline LLMs running via Ollama. Resolves simple edits in under a millisecond using regex fast-path routing.
+*   **Stack**: FastAPI, Ollama (phi3, mistral), TailwindCSS, Vanilla JS.
+*   **Links**: [GitHub Repository](https://github.com/Aryan-theccool/Resume-editor)
+
+### 8. Astitva — Forest Rights Act (FRA) AI Governance
+*   **Description**: A published AI-powered platform (IJAITR Vol. 3) to automate forest land rights claim validation with 89.2% accuracy. Integrates OCR scanners, document classification networks, and GIS mapping tools.
+*   **Stack**: BERT NLP, OCR, PostGIS, MongoDB.
+*   **Key Paper**: Published in *International Journal of Advanced Information Technology and Research (IJAITR) Vol. 3*.
+
+### 9. Inkspace — Infinite Collaborative Whiteboard
+*   **Description**: Infinite canvas whiteboard with low-latency WebSockets multiplayer sync, RoughJS sketching aesthetic, and screen-to-world linear mouse viewport math.
+*   **Stack**: Next.js 14, Zustand, Yjs, Liveblocks, RoughJS.
 *   **Links**: [Live Demo](https://task-eight-psi-64.vercel.app/) | [GitHub Repository](https://github.com/Aryan-theccool/Big-market-/blob/main/README.md)
 
 ---

@@ -1152,6 +1152,46 @@
       color: rgba(255, 255, 255, 0.6);
     }
 
+    .modal-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .modal-btn {
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .modal-btn-primary {
+      background: linear-gradient(135deg, var(--accent), #0040b0);
+      color: #fff;
+    }
+
+    .modal-btn-primary:hover {
+      box-shadow: 0 5px 15px rgba(0, 112, 255, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .modal-btn-secondary {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+    }
+
+    .modal-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .features {
@@ -1290,17 +1330,17 @@
       <div id="projects" class="reveal">
         <h2 class="section-title">High-Impact Projects</h2>
         <div class="features">
-          <div class="feature project-card" data-project="resumeeditor">
-            <span class="feature-icon">✍️</span>
-            <div class="feature-title">Local AI LaTeX Resume Editor</div>
-            <div class="feature-desc">AI-powered LaTeX Resume Editor featuring a sleek glassmorphic UI, surgical regex
-              fast-path routing, and offline local LLMs via Ollama.</div>
+          <div class="feature project-card" data-project="tokenistt">
+            <span class="feature-icon">🤖</span>
+            <div class="feature-title">Tokenistt — AI Cost Gateway</div>
+            <div class="feature-desc">Drop-in SDK proxy and universal gateway for LLM cost tracking, virtual key
+              management, budget enforcement, and multi-provider routing.</div>
           </div>
-          <div class="feature project-card" data-project="neuronhire">
-            <span class="feature-icon">🚀</span>
-            <div class="feature-title">NeuronHire — AI Hiring</div>
-            <div class="feature-desc">AI-powered hiring platform matching developers with the right projects via
-              intelligent requirement analysis.</div>
+          <div class="feature project-card" data-project="derisk">
+            <span class="feature-icon">⚖️</span>
+            <div class="feature-title">DeRisk.biz — Governance Risk AI</div>
+            <div class="feature-desc">Private AI risk intelligence platform for CXOs to assess and detect corporate
+              governance and legal vulnerabilities before regulators do.</div>
           </div>
           <div class="feature project-card" data-project="dharohar">
             <span class="feature-icon">🏛️</span>
@@ -1308,23 +1348,35 @@
             <div class="feature-desc">AWS AI National Finalist. Digitizing India's traditional knowledge to prevent
               biopiracy with 80% direct royalty.</div>
           </div>
-          <div class="feature project-card" data-project="astitva">
-            <span class="feature-icon">🌿</span>
-            <div class="feature-title">Astitva — FRA Governance</div>
-            <div class="feature-desc">Published AI platform for Forest Rights Act implementation. 89.2% accuracy in
-              processing 15,000 claims.</div>
-          </div>
           <div class="feature project-card" data-project="realtimeguard">
             <span class="feature-icon">🛡️</span>
             <div class="feature-title">RealtimeGuard — Fraud AI</div>
             <div class="feature-desc">Blockchain-secured financial monitoring with sub-second latency and PMLA
               compliance.</div>
           </div>
-          <div class="feature project-card" data-project="tokenistt">
-            <span class="feature-icon">🤖</span>
-            <div class="feature-title">Tokenistt Intelligence</div>
-            <div class="feature-desc">Founder & Lead Dev. Drop-in SDK proxy with FinOps cost tracking, virtual key
-              management, budget enforcement, and multi-provider routing.</div>
+          <div class="feature project-card" data-project="myshacreation">
+            <span class="feature-icon">🛍️</span>
+            <div class="feature-title">Mysha Creation — E-Commerce</div>
+            <div class="feature-desc">Premium boutique e-commerce storefront for Indian fashion, featuring shoppable
+              reels, curated edits, and seamless checkout.</div>
+          </div>
+          <div class="feature project-card" data-project="neuronhire">
+            <span class="feature-icon">🔍</span>
+            <div class="feature-title">AI Resume Screener</div>
+            <div class="feature-desc">Interactive utility utilizing TF-IDF and Cosine Similarity to analyze candidate
+              resumes (PDF/DOCX), evaluate skill gaps, and rank fits.</div>
+          </div>
+          <div class="feature project-card" data-project="resumeeditor">
+            <span class="feature-icon">✍️</span>
+            <div class="feature-title">Local AI LaTeX Resume Editor</div>
+            <div class="feature-desc">AI-powered LaTeX Resume Editor featuring a sleek glassmorphic UI, surgical regex
+              fast-path routing, and offline local LLMs via Ollama.</div>
+          </div>
+          <div class="feature project-card" data-project="astitva">
+            <span class="feature-icon">🌿</span>
+            <div class="feature-title">Astitva — FRA Governance</div>
+            <div class="feature-desc">Published AI platform for Forest Rights Act implementation. 89.2% accuracy in
+              processing 15,000 claims.</div>
           </div>
           <div class="feature project-card" data-project="inkspace">
             <span class="feature-icon">🎨</span>
@@ -1486,9 +1538,6 @@
         <div class="marquee-item">LLM Optimization</div>
         <div class="marquee-item">React & Node.js</div>
         <div class="marquee-item">100% Cost Visibility</div>
-        <div class="marquee-item">Indore, India</div>
-        <div class="marquee-item">AITR CSIT '27</div>
-        <div class="marquee-item">Hackathon Finalist</div>
         <div class="marquee-item">Full Stack Developer</div>
         <div class="marquee-item">Tokenistt Co-Founder</div>
         <div class="marquee-item">LLM Optimization</div>
@@ -1496,9 +1545,6 @@
         <div class="marquee-item">100% Cost Visibility</div>
       </div>
     </div>
-    <div class="marquee-item">Indore, India</div>
-    <div class="marquee-item">AITR CSIT '27</div>
-    <div class="marquee-item">Hackathon Finalist</div>
   </div>
   </div>
 
@@ -1633,15 +1679,18 @@
     const projectData = {
       resumeeditor: {
         title: "Local AI LaTeX Resume Editor",
-        desc: "A premium, local-first, AI-powered LaTeX Resume Editor featuring a sleek glassmorphic UI and a hybrid execution engine. It integrates FastAPI, Vanilla HTML5/CSS3/JS, and Ollama (local LLMs). Processes simple targeted edits (like adding skills, bolding text) instantly using surgical regex pattern-matching (under a millisecond) and falls back to local LLMs (mistral, phi3:mini) running offline for complex resume rewriting, ATS optimization, summarization, or career tailoring. Features modular version history with undo/reset capability, dual loading mechanisms (.tex upload or raw copy-paste), and name-persistent export."
+        desc: "A premium, local-first, AI-powered LaTeX Resume Editor featuring a sleek glassmorphic UI and a hybrid execution engine. It integrates FastAPI, Vanilla HTML5/CSS3/JS, and Ollama (local LLMs). Processes simple targeted edits (like adding skills, bolding text) instantly using surgical regex pattern-matching (under a millisecond) and falls back to local LLMs (mistral, phi3:mini) running offline for complex resume rewriting, ATS optimization, summarization, or career tailoring. Features modular version history with undo/reset capability, dual loading mechanisms (.tex upload or raw copy-paste), and name-persistent export.",
+        githubUrl: "https://github.com/Aryan-theccool/Resume-editor"
       },
       neuronhire: {
-        title: "NeuronHire — AI Hiring",
-        desc: "An AI-powered hiring and workflow platform designed to solve client-developer mismatches. Features AI-driven requirement analysis, developer matching, and workflow tracking. Built with TypeScript and Node.js."
+        title: "AI Resume Screener",
+        desc: "Recruiter-grade candidate screening application utilizing natural language processing. Processes resume documents (.pdf, .docx) off the client-side, calculates skill compatibility using Cosine Similarity against job descriptions, highlights missing core capabilities, and outputs sorted applicant spreadsheets.",
+        liveUrl: "https://screen-screeing.vercel.app/"
       },
       dharohar: {
         title: "Dharohar — Heritage Protection",
-        desc: "AWS AI for Bharat Hackathon National Finalist. Digitizing India's traditional knowledge to prevent biopiracy using AWS Transcribe, Bedrock, and an immutable ledger. Direct community royalty system built on smart contracts."
+        desc: "AWS AI for Bharat Hackathon National Finalist. Digitizing India's traditional knowledge to prevent biopiracy using AWS Transcribe, Bedrock, and an immutable ledger. Direct community royalty system built on smart contracts.",
+        liveUrl: "https://frontend-nine-pink-57.vercel.app/"
       },
       astitva: {
         title: "Astitva — FRA Governance",
@@ -1649,21 +1698,36 @@
       },
       realtimeguard: {
         title: "RealtimeGuard — Fraud Detection",
-        desc: "AI fraud detection system with sub-second latency and Ethereum-based immutable audit trails. Implements PMLA compliance monitoring for structuring, CTR, and velocity spikes."
+        desc: "AI fraud detection system with sub-second latency and Ethereum-based immutable audit trails. Implements PMLA compliance monitoring for structuring, CTR, and velocity spikes. Integrates with the SecureFin X payment gateway.",
+        liveUrl: "https://securefin-x-realtimeguard.vercel.app/"
       },
       tokenistt: {
         title: "Tokenistt Intelligence",
-        desc: "An AI Cost Visibility, Governance, and Budget Control platform. Sits as a drop-in SDK replacement with FinOps-grade cost tracking, virtual key management, budget enforcement, and intelligent multi-provider routing across Anthropic, AWS Bedrock, and Azure OpenAI."
+        desc: "An AI Cost Visibility, Governance, and Budget Control platform. Sits as a drop-in SDK replacement with FinOps-grade cost tracking, virtual key management, budget enforcement, and intelligent multi-provider routing across Anthropic, AWS Bedrock, and Azure OpenAI.",
+        liveUrl: "https://tokenistt.com"
       },
       inkspace: {
         title: "Inkspace — Infinite Collaborative Whiteboard",
-        desc: "A premium real-time collaborative infinite-canvas whiteboard application. Built with Next.js 14, Tailwind, and Liveblocks managed WebSockets. Features low-latency multiplayer synchronization, custom screen-to-world coordinate mapping mathematics, an optimized freehand canvas draw loop using requestAnimationFrame, and hand-drawn styling utilizing RoughJS. Uses Zustand stores to bypass React's component re-render bottleneck during continuous stroke updates."
+        desc: "A premium real-time collaborative infinite-canvas whiteboard application. Built with Next.js 14, Tailwind, and Liveblocks managed WebSockets. Features low-latency multiplayer synchronization, custom screen-to-world coordinate mapping mathematics, an optimized freehand canvas draw loop using requestAnimationFrame, and hand-drawn styling utilizing RoughJS. Uses Zustand stores to bypass React's component re-render bottleneck during continuous stroke updates.",
+        liveUrl: "https://task-eight-psi-64.vercel.app/",
+        githubUrl: "https://github.com/Aryan-theccool/Big-market-/blob/main/README.md"
+      },
+      derisk: {
+        title: "DeRisk.biz — Governance Risk AI",
+        desc: "A private enterprise-risk intelligence platform for corporate governance audit automation. Helps boards, CXOs, and directors run structured assessments across legal, operational, and M&A compliance fields to flag high-exposure governance vulnerabilities.",
+        liveUrl: "https://derisk-biz.onrender.com/"
+      },
+      myshacreation: {
+        title: "Mysha Creation — Premium Indian Fashion E-Commerce",
+        desc: "A complete direct-to-consumer premium Indian apparel store built with Next.js and MongoDB. Integrates shoppable reels, customized product galleries organized by collection/occasion, and secure Razorpay payment workflows.",
+        liveUrl: "https://onestoremysha.com"
       }
     };
 
     const modalOverlay = document.getElementById('modalOverlay');
     const modalTitle = document.getElementById('modalTitle');
     const modalBody = document.getElementById('modalBody');
+    const modalLinks = document.getElementById('modalLinks');
 
     document.querySelectorAll('.project-card').forEach(card => {
       card.addEventListener('click', () => {
@@ -1671,6 +1735,26 @@
         const data = projectData[id];
         modalTitle.innerText = data.title;
         modalBody.innerText = data.desc;
+
+        // Populate modal links dynamically
+        modalLinks.innerHTML = '';
+        if (data.liveUrl) {
+          const liveBtn = document.createElement('a');
+          liveBtn.href = data.liveUrl;
+          liveBtn.target = '_blank';
+          liveBtn.className = 'modal-btn modal-btn-primary';
+          liveBtn.innerHTML = '🌐 Live Demo';
+          modalLinks.appendChild(liveBtn);
+        }
+        if (data.githubUrl) {
+          const gitBtn = document.createElement('a');
+          gitBtn.href = data.githubUrl;
+          gitBtn.target = '_blank';
+          gitBtn.className = 'modal-btn modal-btn-secondary';
+          gitBtn.innerHTML = '🐙 GitHub Code';
+          modalLinks.appendChild(gitBtn);
+        }
+
         modalOverlay.classList.add('active');
       });
     });
@@ -1702,6 +1786,7 @@
       <button id="modalClose" class="modal-close">×</button>
       <h2 id="modalTitle" class="modal-title">Project Title</h2>
       <div id="modalBody" class="modal-body">Project details will go here.</div>
+      <div id="modalLinks" class="modal-links"></div>
     </div>
   </div>
 </body>
