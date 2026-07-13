@@ -282,12 +282,30 @@
       text-transform: uppercase;
     }
 
-    .nav-links { display: flex; gap: 24px; align-items: center; }
-    .nav-link { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; transition: color 0.2s; }
-    .nav-link:hover { color: var(--accent); }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: var(--accent);
+    }
 
     /* Live Clock */
-    .live-clock { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: rgba(255,255,255,0.3); margin-left: 20px; }
+    .live-clock {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.3);
+      margin-left: 20px;
+    }
 
     /* Main Content */
     main {
@@ -302,8 +320,10 @@
       background: radial-gradient(circle at center, transparent 0%, rgba(1, 2, 4, 0.4) 100%);
     }
 
-    h1, h2, .section-title {
-      text-shadow: 0 4px 30px rgba(0,0,0,0.9);
+    h1,
+    h2,
+    .section-title {
+      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
     }
 
     /* Hero */
@@ -375,7 +395,7 @@
       color: rgba(255, 255, 255, 0.85);
       max-width: 520px;
       margin: 0 auto 36px;
-      text-shadow: 0 2px 15px rgba(0,0,0,0.7);
+      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
     }
 
     .hero-sub strong {
@@ -566,7 +586,7 @@
       opacity: 1;
     }
 
-    .skill-card > * {
+    .skill-card>* {
       position: relative;
       z-index: 1;
     }
@@ -576,8 +596,8 @@
       border-color: rgba(0, 112, 255, 0.5);
       transform: translateY(-8px);
       box-shadow: 0 20px 40px rgba(0, 112, 255, 0.15),
-                  0 0 25px rgba(0, 112, 255, 0.08),
-                  inset 0 0 15px rgba(0, 112, 255, 0.1);
+        0 0 25px rgba(0, 112, 255, 0.08),
+        inset 0 0 15px rgba(0, 112, 255, 0.1);
     }
 
     .skill-category {
@@ -799,12 +819,23 @@
       margin-bottom: 48px;
     }
 
-    .nav-link { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; transition: color 0.2s; }
-    .nav-link:hover { color: var(--accent); }
+    .nav-link {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: var(--accent);
+    }
 
     .modal-overlay {
       transition: all 0.2s ease;
     }
+
     .modal-content {
       transition: transform 0.2s ease;
     }
@@ -888,30 +919,51 @@
 
     /* Experience Section */
     .experience-section {
-      max-width: 1000px; width: 100%;
+      max-width: 1000px;
+      width: 100%;
       margin-bottom: 64px;
     }
+
     .exp-item {
       padding: 24px;
       margin-bottom: 16px;
       border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.06);
-      background: rgba(255,255,255,0.02);
-      display: flex; gap: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.02);
+      display: flex;
+      gap: 24px;
       transition: all 0.3s ease;
     }
+
     .exp-item:hover {
       border-color: rgba(0, 112, 255, 0.3);
       background: rgba(0, 112, 255, 0.03);
     }
+
     .exp-date {
-      font-size: 14px; color: var(--accent);
+      font-size: 14px;
+      color: var(--accent);
       font-family: 'JetBrains Mono', monospace;
       min-width: 120px;
     }
-    .exp-title { font-weight: 700; font-size: 18px; margin-bottom: 4px; }
-    .exp-company { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 12px; }
-    .exp-desc { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.6); }
+
+    .exp-title {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .exp-company {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 12px;
+    }
+
+    .exp-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.6);
+    }
 
     /* Interactive Terminal Styling */
     .terminal-body {
@@ -920,17 +972,37 @@
       scrollbar-width: thin;
       scrollbar-color: var(--accent) transparent;
     }
-    .terminal-body::-webkit-scrollbar { width: 4px; }
-    .terminal-body::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
-    .terminal-input-line { display: flex; align-items: center; gap: 8px; }
+
+    .terminal-body::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .terminal-body::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 10px;
+    }
+
+    .terminal-input-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     .terminal-input {
-      background: transparent; border: none; color: #fff;
-      font-family: 'JetBrains Mono', monospace; font-size: 13px;
-      width: 100%; outline: none;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      width: 100%;
+      outline: none;
     }
 
     @media (max-width: 768px) {
-      .exp-item { flex-direction: column; gap: 8px; }
+      .exp-item {
+        flex-direction: column;
+        gap: 8px;
+      }
     }
 
     /* Testimonials */
@@ -938,21 +1010,53 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 24px;
-      max-width: 1000px; width: 100%;
+      max-width: 1000px;
+      width: 100%;
       margin-bottom: 80px;
     }
+
     .testimonial-card {
       padding: 32px;
       border-radius: 20px;
-      border: 1px solid rgba(255,255,255,0.06);
-      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.02);
       backdrop-filter: blur(12px);
     }
-    .t-quote { font-size: 15px; font-style: italic; color: rgba(255,255,255,0.7); margin-bottom: 20px; }
-    .t-author { display: flex; align-items: center; gap: 12px; }
-    .t-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
-    .t-name { font-weight: 600; font-size: 14px; }
-    .t-pos { font-size: 12px; color: rgba(255,255,255,0.4); }
+
+    .t-quote {
+      font-size: 15px;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
+    }
+
+    .t-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .t-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .t-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .t-pos {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+    }
 
     /* Scroll Animations */
     .reveal {
@@ -960,18 +1064,20 @@
       transform: translateY(30px);
       transition: all 0.8s ease-out;
     }
+
     .reveal.active {
       opacity: 1;
       transform: translateY(0);
     }
 
     .footer-link {
-      color: rgba(255,255,255,0.4);
+      color: rgba(255, 255, 255, 0.4);
       text-decoration: none;
       font-size: 14px;
       transition: all 0.2s ease;
       font-weight: 500;
     }
+
     .footer-link:hover {
       color: var(--accent);
       transform: translateY(-2px);
@@ -987,26 +1093,64 @@
 
     /* Modals */
     .modal-overlay {
-      position: fixed; inset: 0; background: rgba(0,0,0,0.8);
-      backdrop-filter: blur(8px); z-index: 1000;
-      display: none; align-items: center; justify-content: center;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
       padding: 20px;
     }
+
     .modal-content {
-      background: #0a0c10; border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 24px; max-width: 600px; width: 100%;
-      padding: 40px; position: relative;
-      transform: scale(0.9); transition: transform 0.3s ease;
+      background: #0a0c10;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      max-width: 600px;
+      width: 100%;
+      padding: 40px;
+      position: relative;
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
     }
-    .modal-overlay.active { display: flex; }
-    .modal-overlay.active .modal-content { transform: scale(1); }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: scale(1);
+    }
+
     .modal-close {
-      position: absolute; top: 20px; right: 20px;
-      background: rgba(255,255,255,0.05); border: none; color: #fff;
-      width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: none;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
     }
-    .modal-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 24px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; color: var(--accent); }
-    .modal-body { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.6); }
+
+    .modal-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+
+    .modal-body {
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.6);
+    }
 
     /* Responsive */
     @media (max-width: 768px) {
@@ -1059,31 +1203,32 @@
   <div style="position:relative;z-index:2">
     <nav>
       <div class="logo">
-        <div class="logo-mark"><svg class="logo-svg" viewBox="0 0 100 100" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="logoGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#00d4ff" />
-              <stop offset="100%" stop-color="#0070ff" />
-            </linearGradient>
-            <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#0c1020" />
-              <stop offset="100%" stop-color="#040507" />
-            </linearGradient>
-            <clipPath id="circleClip2">
-              <circle cx="50" cy="50" r="43" />
-            </clipPath>
-          </defs>
-          <circle cx="50" cy="50" r="46" fill="none" stroke="url(#logoGrad2)" stroke-width="4" />
-          <g clip-path="url(#circleClip2)">
-            <rect width="100" height="100" fill="url(#bgGrad2)" />
-            <g transform="rotate(45 50 50)" fill="url(#logoGrad2)">
-              <rect x="12" y="-20" width="8" height="140" rx="3" />
-              <rect x="25" y="-20" width="8" height="140" rx="3" />
-              <rect x="38" y="-20" width="8" height="140" rx="3" />
+        <div class="logo-mark"><svg class="logo-svg" viewBox="0 0 100 100" width="32" height="32"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logoGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00d4ff" />
+                <stop offset="100%" stop-color="#0070ff" />
+              </linearGradient>
+              <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0c1020" />
+                <stop offset="100%" stop-color="#040507" />
+              </linearGradient>
+              <clipPath id="circleClip2">
+                <circle cx="50" cy="50" r="43" />
+              </clipPath>
+            </defs>
+            <circle cx="50" cy="50" r="46" fill="none" stroke="url(#logoGrad2)" stroke-width="4" />
+            <g clip-path="url(#circleClip2)">
+              <rect width="100" height="100" fill="url(#bgGrad2)" />
+              <g transform="rotate(45 50 50)" fill="url(#logoGrad2)">
+                <rect x="12" y="-20" width="8" height="140" rx="3" />
+                <rect x="25" y="-20" width="8" height="140" rx="3" />
+                <rect x="38" y="-20" width="8" height="140" rx="3" />
+              </g>
+              <polygon points="55,80 80,80 80,70 72,70 72,45 58,31 50,39 62,51 62,70 55,70" fill="url(#logoGrad2)" />
             </g>
-            <polygon points="55,80 80,80 80,70 72,70 72,45 58,31 50,39 62,51 62,70 55,70" fill="url(#logoGrad2)" />
-          </g>
-        </svg></div>Aryan Singh
+          </svg></div>Aryan Singh
         <div id="liveClock" class="live-clock">00:00:00 IND</div>
       </div>
       <div class="nav-links">
@@ -1105,7 +1250,8 @@
           <span class="h1-line2">Co-Founder of Tokenistt.</span>
         </h1>
         <p class="hero-sub">
-          I build production-grade systems that ship, scale, and get adopted. Founder at <strong>Tokenistt</strong>. Published Researcher in AI Governance. Expert in reducing LLM token costs by <strong>96%</strong>.
+          I build production-grade systems that ship, scale, and get adopted. Founder at <strong>Tokenistt</strong>.
+          Published Researcher in AI Governance. Expert in reducing LLM token costs by <strong>31%</strong>.
         </p>
         <div class="waitlist-form">
           <div class="input-group" style="justify-content: center; flex-direction: row; flex-wrap: wrap;">
@@ -1118,20 +1264,24 @@
         <div class="stats">
           <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Hackathons</span></div>
           <div class="stat-divider"></div>
-          <div class="stat"><span class="stat-num">96%</span><span class="stat-label">Token Reduction</span></div>
+          <div class="stat"><span class="stat-num">31%</span><span class="stat-label">Token Reduction</span></div>
           <div class="stat-divider"></div>
           <div class="stat"><span class="stat-num">2</span><span class="stat-label">Live Apps</span></div>
         </div>
       </div>
 
       <div id="about" class="about-section">
-        <h2 class="section-title" style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:800; letter-spacing:-0.03em;">About Me</h2>
+        <h2 class="section-title"
+          style="font-family:'Plus Jakarta Sans', sans-serif; font-weight:800; letter-spacing:-0.03em;">About Me</h2>
         <div class="about-content">
           <div class="about-text">
-            <p>I'm Aryan Singh, the founder of <strong>Tokenistt</strong>—a token intelligence platform for Claude API developers. I help teams count, optimize, and cut API costs before they spend a single dollar.</p>
+            <p>I'm Aryan Singh, the founder of <strong>Tokenistt</strong>—a token intelligence platform for Claude API
+              developers. I help teams count, optimize, and cut API costs before they spend a single dollar.</p>
           </div>
           <div class="about-text">
-            <p>Beyond Tokenistt, I build AI-driven platforms for social impact, from <strong>FRA Governance</strong> to <strong>Heritage Protection</strong>. I bridge the gap between complex legal frameworks and scalable technology.</p>
+            <p>Beyond Tokenistt, I build AI-driven platforms for social impact, from <strong>FRA Governance</strong> to
+              <strong>Heritage Protection</strong>. I bridge the gap between complex legal frameworks and scalable
+              technology.</p>
           </div>
         </div>
       </div>
@@ -1142,37 +1292,44 @@
           <div class="feature project-card" data-project="resumeeditor">
             <span class="feature-icon">✍️</span>
             <div class="feature-title">Local AI LaTeX Resume Editor</div>
-            <div class="feature-desc">AI-powered LaTeX Resume Editor featuring a sleek glassmorphic UI, surgical regex fast-path routing, and offline local LLMs via Ollama.</div>
+            <div class="feature-desc">AI-powered LaTeX Resume Editor featuring a sleek glassmorphic UI, surgical regex
+              fast-path routing, and offline local LLMs via Ollama.</div>
           </div>
           <div class="feature project-card" data-project="neuronhire">
             <span class="feature-icon">🚀</span>
             <div class="feature-title">NeuronHire — AI Hiring</div>
-            <div class="feature-desc">AI-powered hiring platform matching developers with the right projects via intelligent requirement analysis.</div>
+            <div class="feature-desc">AI-powered hiring platform matching developers with the right projects via
+              intelligent requirement analysis.</div>
           </div>
           <div class="feature project-card" data-project="dharohar">
             <span class="feature-icon">🏛️</span>
             <div class="feature-title">Dharohar — Heritage Protection</div>
-            <div class="feature-desc">AWS AI National Finalist. Digitizing India's traditional knowledge to prevent biopiracy with 80% direct royalty.</div>
+            <div class="feature-desc">AWS AI National Finalist. Digitizing India's traditional knowledge to prevent
+              biopiracy with 80% direct royalty.</div>
           </div>
           <div class="feature project-card" data-project="astitva">
             <span class="feature-icon">🌿</span>
             <div class="feature-title">Astitva — FRA Governance</div>
-            <div class="feature-desc">Published AI platform for Forest Rights Act implementation. 89.2% accuracy in processing 15,000 claims.</div>
+            <div class="feature-desc">Published AI platform for Forest Rights Act implementation. 89.2% accuracy in
+              processing 15,000 claims.</div>
           </div>
           <div class="feature project-card" data-project="realtimeguard">
             <span class="feature-icon">🛡️</span>
             <div class="feature-title">RealtimeGuard — Fraud AI</div>
-            <div class="feature-desc">Blockchain-secured financial monitoring with sub-second latency and PMLA compliance.</div>
+            <div class="feature-desc">Blockchain-secured financial monitoring with sub-second latency and PMLA
+              compliance.</div>
           </div>
           <div class="feature project-card" data-project="tokenistt">
             <span class="feature-icon">🤖</span>
             <div class="feature-title">Tokenistt Intelligence</div>
-            <div class="feature-desc">Founder & Lead Dev. MCP server & VS Code extension saving developers up to 96% on Claude API costs.</div>
+            <div class="feature-desc">Founder & Lead Dev. Drop-in SDK proxy with FinOps cost tracking, virtual key
+              management, budget enforcement, and multi-provider routing.</div>
           </div>
           <div class="feature project-card" data-project="inkspace">
             <span class="feature-icon">🎨</span>
             <div class="feature-title">Inkspace — Infinite Whiteboard</div>
-            <div class="feature-desc">Real-time collaborative infinite canvas with custom screen-to-world math, Yjs multiplayer sync, and hand-drawn styling.</div>
+            <div class="feature-desc">Real-time collaborative infinite canvas with custom screen-to-world math, Yjs
+              multiplayer sync, and hand-drawn styling.</div>
           </div>
         </div>
       </div>
@@ -1183,14 +1340,12 @@
           <div class="skill-list">
             <span class="skill-tag">C++</span>
             <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Python</span>
             <span class="skill-tag">SQL</span>
           </div>
         </div>
         <div class="skill-card">
           <div class="skill-category">Core Stack</div>
           <div class="skill-list">
-            <span class="skill-tag">Python</span>
             <span class="skill-tag">Node.js</span>
             <span class="skill-tag">React</span>
             <span class="skill-tag">C++</span>
@@ -1223,7 +1378,8 @@
           <div class="exp-content">
             <div class="exp-title">Founder & Lead Developer</div>
             <div class="exp-company">Tokenistt — tokenistt.com</div>
-            <div class="exp-desc">Building an MCP server and VS Code extension for Claude API cost optimization. Developed tools for exact token analysis, cost prediction, and prompt compression (saving ~96% per query).</div>
+            <div class="exp-desc">Building a drop-in SDK replacement and gateway for API cost optimization. Developed
+              tools for exact token analysis, cost prediction, and prompt compression (saving ~31% per query).</div>
           </div>
         </div>
         <div class="exp-item">
@@ -1231,7 +1387,8 @@
           <div class="exp-content">
             <div class="exp-title">Published Researcher</div>
             <div class="exp-company">IJAITR Vol. 3</div>
-            <div class="exp-desc">Author of "Astitva: AI-Powered FRA Governance Platform". Published work on digitizing tribal land claims and mapping assets via GIS for legal implementation.</div>
+            <div class="exp-desc">Author of "Astitva: AI-Powered FRA Governance Platform". Published work on digitizing
+              tribal land claims and mapping assets via GIS for legal implementation.</div>
           </div>
         </div>
         <div class="exp-item">
@@ -1239,7 +1396,8 @@
           <div class="exp-content">
             <div class="exp-title">B.Tech CSIT</div>
             <div class="exp-company">AITR Indore</div>
-            <div class="exp-desc">Focusing on distributed systems and AI architecture. National Finalist at AWS AI for Bharat Hackathon.</div>
+            <div class="exp-desc">Focusing on distributed systems and AI architecture. National Finalist at AWS AI for
+              Bharat Hackathon.</div>
           </div>
         </div>
       </div>
@@ -1266,7 +1424,8 @@
         <h2 class="section-title" style="text-align: center;">Testimonials</h2>
         <div class="testimonials-grid">
           <div class="testimonial-card">
-            <div class="t-quote">"Aryan's ability to optimize LLM contexts is unparalleled. He reduced our API costs by nearly 95% in just a few weeks."</div>
+            <div class="t-quote">"Aryan's ability to optimize LLM contexts is unparalleled. He reduced our API costs by
+              nearly 95% in just a few weeks."</div>
             <div class="t-author">
               <div class="t-avatar">JD</div>
               <div>
@@ -1276,7 +1435,8 @@
             </div>
           </div>
           <div class="testimonial-card">
-            <div class="t-quote">"A rare talent who understands both the deep technical architecture and the business value of scale. Highly recommended."</div>
+            <div class="t-quote">"A rare talent who understands both the deep technical architecture and the business
+              value of scale. Highly recommended."</div>
             <div class="t-author">
               <div class="t-avatar">AS</div>
               <div>
@@ -1286,7 +1446,8 @@
             </div>
           </div>
           <div class="testimonial-card">
-            <div class="t-quote">"Winning Void Hack 7.0 was no fluke. Aryan's project was the most polished and innovative one we saw all weekend."</div>
+            <div class="t-quote">"Winning Void Hack 7.0 was no fluke. Aryan's project was the most polished and
+              innovative one we saw all weekend."</div>
             <div class="t-author">
               <div class="t-avatar">MK</div>
               <div>
@@ -1309,7 +1470,8 @@
           <textarea class="form-textarea" rows="5" placeholder="Your Message" required></textarea>
           <button type="submit" class="send-btn" id="sendBtn">Send Message</button>
         </form>
-        <div id="formSuccess" style="display:none; text-align: center; color: var(--accent); margin-top: 16px; font-weight: 600;">
+        <div id="formSuccess"
+          style="display:none; text-align: center; color: var(--accent); margin-top: 16px; font-weight: 600;">
           Message sent successfully! I'll get back to you soon.
         </div>
       </div>
@@ -1321,7 +1483,7 @@
         <div class="marquee-item">Tokenistt Co-Founder</div>
         <div class="marquee-item">LLM Optimization</div>
         <div class="marquee-item">React & Node.js</div>
-        <div class="marquee-item">96% Token Reduction</div>
+        <div class="marquee-item">31% Token Reduction</div>
         <div class="marquee-item">Indore, India</div>
         <div class="marquee-item">AITR CSIT '27</div>
         <div class="marquee-item">Hackathon Finalist</div>
@@ -1329,22 +1491,24 @@
         <div class="marquee-item">Tokenistt Co-Founder</div>
         <div class="marquee-item">LLM Optimization</div>
         <div class="marquee-item">React & Node.js</div>
-        <div class="marquee-item">96% Token Reduction</div>
-        <div class="marquee-item">Indore, India</div>
-        <div class="marquee-item">AITR CSIT '27</div>
-        <div class="marquee-item">Hackathon Finalist</div>
+        <div class="marquee-item">31% Token Reduction</div>
       </div>
+      <div class="marquee-item">Indore, India</div>
+      <div class="marquee-item">AITR CSIT '27</div>
+      <div class="marquee-item">Hackathon Finalist</div>
     </div>
+  </div>
 
-    <footer>
-      <div style="margin-bottom: 24px; display: flex; justify-content: center; gap: 20px;">
-        <a href="https://github.com/Aryan-theccool" target="_blank" class="footer-link">GitHub</a>
-        <a href="https://www.linkedin.com/in/aryan-singh-bhadoria-70086a28a/" target="_blank" class="footer-link">LinkedIn</a>
-        <a href="https://www.linkedin.com/company/tokenistt" target="_blank" class="footer-link">Tokenistt</a>
-      </div>
-      <div>Building production-grade systems that ship and scale.</div>
-      <div>© 2025 Aryan Singh Bhadoria — <span>Let's build together.</span></div>
-    </footer>
+  <footer>
+    <div style="margin-bottom: 24px; display: flex; justify-content: center; gap: 20px;">
+      <a href="https://github.com/Aryan-theccool" target="_blank" class="footer-link">GitHub</a>
+      <a href="https://www.linkedin.com/in/aryan-singh-bhadoria-70086a28a/" target="_blank"
+        class="footer-link">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/tokenistt" target="_blank" class="footer-link">Tokenistt</a>
+    </div>
+    <div>Building production-grade systems that ship and scale.</div>
+    <div>© 2025 Aryan Singh Bhadoria — <span>Let's build together.</span></div>
+  </footer>
   </div>
 
   <script>
@@ -1374,9 +1538,9 @@
     const commands = {
       help: "Available commands: <span class='t-info'>about</span>, <span class='t-info'>skills</span>, <span class='t-info'>projects</span>, <span class='t-info'>tokenistt</span>, <span class='t-info'>contact</span>, <span class='t-info'>clear</span>",
       about: "Aryan Singh: Founder @ Tokenistt, AI Researcher, and Full Stack Developer.",
-      skills: "Stack: AWS, Blockchain (Ethereum), Python, Node.js, React, MongoDB, GIS (PostGIS).",
+      skills: "Stack: AWS, Blockchain (Ethereum), Node.js, React, MongoDB, GIS (PostGIS).",
       projects: "High-Impact: NeuronHire (AI Hiring), Dharohar (AWS AI), Astitva (FRA Governance), RealtimeGuard (Fraud AI), Inkspace (Infinite Canvas).",
-      tokenistt: "Status: MCP server live. Tools: analyze, predict, optimize. Saving devs up to 96% on costs.",
+      tokenistt: "Status: MCP server live. Tools: analyze, predict, optimize. Saving devs up to 31% on costs.",
       contact: "Email: aryanbhadoria100@gmail.com | LinkedIn: /in/aryan-singh-bhadoria-70086a28a | GitHub: @Aryan-theccool",
       clear: "clear"
     };
@@ -1486,7 +1650,7 @@
       },
       tokenistt: {
         title: "Tokenistt Intelligence",
-        desc: "A token intelligence platform for Claude API developers. Includes an MCP server with tools for exact token analysis, cost prediction, and context optimization. Built to save developers time and thousands in API costs."
+        desc: "An AI Cost Visibility, Governance, and Budget Control platform. Sits as a drop-in SDK replacement with FinOps-grade cost tracking, virtual key management, budget enforcement, and intelligent multi-provider routing across Anthropic, AWS Bedrock, and Azure OpenAI."
       },
       inkspace: {
         title: "Inkspace — Infinite Collaborative Whiteboard",
