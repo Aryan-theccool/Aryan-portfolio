@@ -24,7 +24,7 @@ Welcome to the official repository of my premium developer portfolio. I build pr
 
 ## ⚡ High-Impact Accomplishments at a Glance
 
-*   **31% LLM Token Cost Reduction**: Developed custom MCP servers and prompt compression layers to compress Claude API context windows.
+*   **100% LLM Cost Visibility & Budgets**: Developed a gateway proxy supporting virtual key management scoped to workspaces, real-time budget enforcement, and multi-provider routing.
 *   **Published AI Governance Platform**: Author of *"Astitva: AI-Powered FRA Governance Platform"* in **IJAITR Vol. 3** for automating land claim processing with **89.2% accuracy**.
 *   **AWS AI for Bharat Hackathon Finalist**: Designed and implemented *Dharohar* to safeguard indigenous traditional knowledge using AWS Bedrock and blockchain ledger audits.
 
@@ -46,7 +46,7 @@ Welcome to the official repository of my premium developer portfolio. I build pr
 
 ### 1. Tokenistt Intelligence — Co-Founder & Lead Developer
 *   **Description**: A drop-in OpenAI SDK replacement and gateway proxy featuring FinOps-grade cost tracking, virtual key management, budget enforcement, and intelligent multi-provider routing across Anthropic, AWS Bedrock, and Azure OpenAI.
-*   **Key Achievement**: Empowered developers to control spending and route requests dynamically, reducing average query costs by **up to 31%**.
+*   **Key Achievement**: Empowered developers to control spending and route requests dynamically, reducing average query costs by **up to 96%**.
 *   **Stack**: Node.js, Express, Kafka, ClickHouse, Next.js.
 *   **Links**: [Live Site](https://tokenistt.com)
 
