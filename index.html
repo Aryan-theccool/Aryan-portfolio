@@ -1825,20 +1825,20 @@
       color: rgba(255, 255, 255, 0.6);
     }
 
-    /* ===== ENHANCED MAGAZINE-LIKE TYPOGRAPHY ===== */
-    /* Refined heading hierarchy with better spacing */
+    /* ===== BOLD MAGAZINE-LIKE TYPOGRAPHY ===== */
+    /* Refined heading hierarchy with maximum impact */
     h1, h2, h3, h4, h5, h6 {
       word-spacing: 0.05em;
       letter-spacing: -0.015em;
     }
 
-    /* Section headers with subtext flow */
+    /* Section headers with powerful visual hierarchy */
     .section-header {
       position: relative;
-      margin-bottom: 64px;
+      margin-bottom: 80px;
       opacity: 0;
-      transform: translateY(40px);
-      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transform: translateY(60px);
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .section-header.active {
@@ -1848,16 +1848,17 @@
 
     .section-eyebrow {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 2.5px;
+      font-size: 13px;
+      letter-spacing: 3.5px;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 12px;
-      font-weight: 600;
+      color: #00d4ff;
+      margin-bottom: 16px;
+      font-weight: 800;
       display: block;
       opacity: 0;
-      transform: translateY(-10px);
-      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transform: translateY(-15px);
+      transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+      text-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
     }
 
     .section-header.active .section-eyebrow {
@@ -1867,18 +1868,19 @@
 
     .section-heading {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: clamp(44px, 6vw, 60px);
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      line-height: 1.1;
-      margin-bottom: 24px;
-      background: linear-gradient(135deg, #ffffff 0%, rgba(0, 212, 255, 0.8) 100%);
+      font-size: clamp(52px, 7vw, 72px);
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      line-height: 1.05;
+      margin-bottom: 28px;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(0, 212, 255, 0.95) 100%);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
       background-clip: text;
+      -webkit-text-fill-color: transparent;
       opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+      transform: translateY(30px);
+      transition: all 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+      text-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
     }
 
     .section-header.active .section-heading {
@@ -1887,14 +1889,14 @@
     }
 
     .section-descriptor {
-      font-size: 18px;
-      line-height: 1.75;
-      color: rgba(255, 255, 255, 0.7);
-      max-width: 800px;
-      font-weight: 400;
+      font-size: 19px;
+      line-height: 1.85;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 900px;
+      font-weight: 500;
       opacity: 0;
-      transform: translateY(15px);
-      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+      transform: translateY(20px);
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
     }
 
     .section-header.active .section-descriptor {
@@ -1903,36 +1905,42 @@
     }
 
     .section-descriptor strong {
-      color: var(--accent2);
-      font-weight: 700;
+      color: #00d4ff;
+      font-weight: 900;
+      text-shadow: 0 0 12px rgba(0, 212, 255, 0.3);
     }
 
     .section-descriptor em {
-      color: rgba(0, 212, 255, 0.85);
+      color: rgba(0, 212, 255, 0.95);
       font-style: italic;
+      font-weight: 700;
     }
 
-    /* ===== SCROLL NARRATIVE VIGNETTES ===== */
-    /* Micro-stories that appear as you scroll */
+    /* ===== BOLD SCROLL NARRATIVE VIGNETTES ===== */
+    /* High-impact micro-stories that demand attention */
     .narrative-vignette {
       position: fixed;
-      bottom: 40px;
-      left: 40px;
-      max-width: 300px;
-      background: rgba(0, 112, 255, 0.08);
-      border: 1px solid rgba(0, 112, 255, 0.15);
-      border-radius: 16px;
-      padding: 20px 24px;
-      backdrop-filter: blur(12px);
-      font-size: 14px;
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.65);
+      bottom: 50px;
+      left: 50px;
+      max-width: 380px;
+      background: linear-gradient(135deg, 
+        rgba(0, 112, 255, 0.25) 0%,
+        rgba(0, 40, 120, 0.18) 100%);
+      border: 2px solid rgba(0, 112, 255, 0.4);
+      border-radius: 20px;
+      padding: 32px 28px;
+      backdrop-filter: blur(20px);
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9);
       z-index: 40;
       pointer-events: none;
       opacity: 0;
-      transform: translateY(20px) translateX(-20px);
-      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      box-shadow: 0 8px 32px rgba(0, 112, 255, 0.1);
+      transform: translateY(40px) translateX(-40px);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 
+        0 20px 60px rgba(0, 112, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
 
     .narrative-vignette.visible {
@@ -1942,142 +1950,183 @@
 
     .narrative-vignette.exit {
       opacity: 0;
-      transform: translateY(20px) translateX(-20px);
+      transform: translateY(40px) translateX(-40px);
     }
 
     .vignette-label {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      color: #00d4ff;
       text-transform: uppercase;
-      margin-bottom: 8px;
-      font-weight: 600;
+      margin-bottom: 14px;
+      font-weight: 700;
       display: block;
+      text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
     }
 
     .vignette-text {
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.75);
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 500;
+      line-height: 1.7;
     }
 
     .vignette-text strong {
-      color: var(--accent2);
-      font-weight: 700;
+      color: #00d4ff;
+      font-weight: 800;
+      text-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
     }
 
-    /* ===== ENHANCED 3D PARTICLE SANCTUARY ===== */
-    /* Better container and more sophisticated styling */
+    .vignette-text em {
+      color: rgba(0, 212, 255, 0.9);
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    /* ===== BOLD 3D PARTICLE SANCTUARY - HIGH IMPACT ===== */
+    /* Dramatic, immersive container with strong visual presence */
     .three-js-wrapper {
       position: relative;
       width: 100%;
-      height: 520px;
-      max-width: 1100px;
-      margin: 100px auto;
-      border-radius: 28px;
+      height: 680px;
+      max-width: 1200px;
+      margin: 140px auto;
+      border-radius: 32px;
       overflow: hidden;
       background: linear-gradient(135deg, 
-        rgba(0, 112, 255, 0.12) 0%,
-        rgba(0, 4, 10, 0.7) 50%,
-        rgba(0, 212, 255, 0.08) 100%);
-      border: 1.5px solid rgba(0, 112, 255, 0.2);
+        rgba(0, 112, 255, 0.25) 0%,
+        rgba(0, 4, 10, 0.85) 50%,
+        rgba(0, 212, 255, 0.15) 100%);
+      border: 2px solid rgba(0, 112, 255, 0.4);
       box-shadow: 
-        0 0 80px rgba(0, 112, 255, 0.12),
-        inset 0 0 80px rgba(0, 112, 255, 0.06),
-        0 20px 60px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+        0 0 120px rgba(0, 112, 255, 0.25),
+        inset 0 0 100px rgba(0, 112, 255, 0.12),
+        0 30px 80px rgba(0, 112, 255, 0.2);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       opacity: 0;
-      transform: translateY(60px);
-      transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s;
+      transform: translateY(80px) scale(0.95);
+      transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
     }
 
     .three-js-wrapper.active {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
 
     .three-js-wrapper::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 30% 50%, rgba(0, 112, 255, 0.1) 0%, transparent 60%);
+      background: 
+        radial-gradient(circle at 25% 40%, rgba(0, 112, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 75% 70%, rgba(0, 212, 255, 0.15) 0%, transparent 50%);
       pointer-events: none;
       z-index: 1;
+      animation: pulse-overlay 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-overlay {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
     }
 
     .three-js-label {
       position: absolute;
-      top: 28px;
-      left: 36px;
+      top: 32px;
+      left: 40px;
       z-index: 10;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      letter-spacing: 2.2px;
-      color: var(--accent);
+      font-size: 14px;
+      letter-spacing: 3px;
+      color: #00d4ff;
       text-transform: uppercase;
-      font-weight: 600;
-      opacity: 0.7;
-      transition: all 0.6s ease;
+      font-weight: 700;
+      opacity: 1;
+      transition: all 0.4s ease;
+      text-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+      letter-spacing: 3.5px;
     }
 
     .three-js-wrapper:hover .three-js-label {
       opacity: 1;
+      text-shadow: 0 0 30px rgba(0, 212, 255, 0.9);
+      letter-spacing: 4.5px;
     }
 
     .three-js-subtitle {
       position: absolute;
-      bottom: 28px;
-      right: 36px;
+      bottom: 32px;
+      right: 40px;
       z-index: 10;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.5);
+      font-size: 16px;
+      color: rgba(0, 212, 255, 0.8);
       font-style: italic;
-      opacity: 0.6;
-      transition: all 0.6s ease;
+      opacity: 1;
+      transition: all 0.4s ease;
+      font-weight: 600;
+      text-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
     }
 
     .three-js-wrapper:hover .three-js-subtitle {
       opacity: 1;
-      color: rgba(255, 255, 255, 0.7);
+      color: #00d4ff;
+      text-shadow: 0 0 25px rgba(0, 212, 255, 0.8);
     }
 
-    /* ===== RESPONSIVE TYPOGRAPHY ===== */
+    /* ===== RESPONSIVE BOLD TYPOGRAPHY ===== */
     @media (max-width: 768px) {
       .section-heading {
-        font-size: clamp(32px, 5vw, 44px);
+        font-size: clamp(40px, 6vw, 52px);
       }
 
       .section-descriptor {
-        font-size: 16px;
-        line-height: 1.65;
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .section-eyebrow {
+        font-size: 12px;
+        letter-spacing: 3px;
       }
 
       .narrative-vignette {
-        max-width: 260px;
-        bottom: 20px;
-        left: 20px;
-        font-size: 13px;
-        padding: 16px 20px;
+        max-width: 320px;
+        bottom: 30px;
+        left: 30px;
+        font-size: 14px;
+        padding: 24px 22px;
+      }
+
+      .vignette-label {
+        font-size: 11px;
+        letter-spacing: 2.2px;
+        margin-bottom: 12px;
+      }
+
+      .vignette-text {
+        font-size: 14px;
       }
 
       .three-js-wrapper {
-        height: 380px;
-        margin: 60px auto;
+        height: 480px;
+        margin: 100px auto;
+        border-radius: 24px;
       }
 
       .three-js-label {
-        font-size: 11px;
-        letter-spacing: 1.8px;
-        top: 20px;
-        left: 24px;
+        font-size: 12px;
+        letter-spacing: 2.5px;
+        top: 24px;
+        left: 28px;
       }
 
       .three-js-subtitle {
-        bottom: 20px;
-        right: 24px;
-        font-size: 12px;
+        bottom: 24px;
+        right: 28px;
+        font-size: 14px;
       }
     }
   </style>
@@ -2928,7 +2977,7 @@
       titleObserver.observe(el);
     });
 
-    // === THREE.JS PARTICLE SANCTUARY ===
+    // === THREE.JS PARTICLE SANCTUARY — BOLD & DRAMATIC ===
     if (window.THREE) {
       const container = document.getElementById('threeJsContainer');
       if (container) {
@@ -2940,54 +2989,66 @@
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setSize(width, height);
         renderer.setClearColor(0x000000, 0);
+        renderer.setPixelRatio(window.devicePixelRatio);
         container.appendChild(renderer.domElement);
 
-        camera.position.z = 30;
+        camera.position.z = 35;
 
-        // Create particle geometry with enhanced count and spread
+        // Create particle geometry with BOLD impact
         const geometry = new THREE.BufferGeometry();
-        const particleCount = 200;
+        const particleCount = 300; // 200 → 300 for more density
         const positions = new Float32Array(particleCount * 3);
         const colors = new Float32Array(particleCount * 3);
+        const sizes = new Float32Array(particleCount);
         const velocities = new Float32Array(particleCount * 3);
 
-        for (let i = 0; i < particleCount * 3; i += 3) {
-          positions[i] = (Math.random() - 0.5) * 100;
-          positions[i + 1] = (Math.random() - 0.5) * 100;
-          positions[i + 2] = (Math.random() - 0.5) * 100;
+        for (let i = 0; i < particleCount; i++) {
+          // Position
+          positions[i * 3] = (Math.random() - 0.5) * 120;
+          positions[i * 3 + 1] = (Math.random() - 0.5) * 120;
+          positions[i * 3 + 2] = (Math.random() - 0.5) * 120;
 
           // Velocity for organic movement
-          velocities[i] = (Math.random() - 0.5) * 0.02;
-          velocities[i + 1] = (Math.random() - 0.5) * 0.02;
-          velocities[i + 2] = (Math.random() - 0.5) * 0.02;
+          velocities[i * 3] = (Math.random() - 0.5) * 0.04;
+          velocities[i * 3 + 1] = (Math.random() - 0.5) * 0.04;
+          velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.04;
 
-          // Blue to Cyan gradient with higher saturation
-          const hue = Math.random() * 0.3 + 0.55; // 55-85% of spectrum (cyan-blue)
-          const color = new THREE.Color().setHSL(hue, 0.9, 0.55);
-          colors[i] = color.r;
-          colors[i + 1] = color.g;
-          colors[i + 2] = color.b;
+          // Size variation (bigger particles for impact)
+          sizes[i] = Math.random() * 3 + 1;
+
+          // Vibrant blue to magenta gradient (more striking)
+          const hue = Math.random() * 0.4 + 0.5;
+          const saturation = Math.random() * 0.3 + 0.7;
+          const lightness = Math.random() * 0.2 + 0.55;
+          const color = new THREE.Color().setHSL(hue, saturation, lightness);
+          colors[i * 3] = color.r;
+          colors[i * 3 + 1] = color.g;
+          colors[i * 3 + 2] = color.b;
         }
 
         geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
         geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+        geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
         const positionAttribute = geometry.getAttribute('position');
+        const sizeAttribute = geometry.getAttribute('size');
 
         const material = new THREE.PointsMaterial({
-          size: 1.5,
+          size: 2.5,
           sizeAttenuation: true,
           vertexColors: true,
           transparent: true,
-          opacity: 0.7,
-          sizeRange: [1, 3]
+          opacity: 0.85,
+          sizeRange: [0.5, 8]
         });
 
         const points = new THREE.Points(geometry, material);
         scene.add(points);
 
-        // Add subtle light interaction
-        const light = new THREE.AmbientLight(0x0070ff, 0.3);
-        scene.add(light);
+        // Stronger lighting for drama
+        const light1 = new THREE.AmbientLight(0x0070ff, 0.5);
+        const light2 = new THREE.AmbientLight(0x00d4ff, 0.3);
+        scene.add(light1);
+        scene.add(light2);
 
         let time = 0;
         let isHovering = false;
@@ -3002,40 +3063,44 @@
           mouseY = (e.clientY - rect.top) / height - 0.5;
         });
 
-        // Animation loop with wave simulation
+        // Animation loop with dramatic effects
         function animateParticles() {
           requestAnimationFrame(animateParticles);
 
-          time += 0.005;
+          time += 0.008; // Faster animation
 
-          // Rotate for organic feel
-          points.rotation.x += 0.00015;
-          points.rotation.y += 0.0003;
-          points.rotation.z += 0.00025;
+          // Bold rotation
+          points.rotation.x += 0.0002;
+          points.rotation.y += 0.0004;
+          points.rotation.z += 0.0003;
 
-          // Update particle positions for wave effect
+          // Update particle positions for dramatic wave effect
           const positions = positionAttribute.array;
+          const sizes = sizeAttribute.array;
           for (let i = 0; i < positions.length; i += 3) {
-            // Gentle wave distortion
             const idx = i / 3;
-            const originalX = (Math.random() - 0.5) * 100;
-            positions[i] += Math.sin(time + idx * 0.01) * 0.1;
-            positions[i + 1] += Math.cos(time + idx * 0.015) * 0.08;
-            positions[i + 2] += Math.sin(time * 0.5 + idx * 0.008) * 0.12;
+            // Larger wave amplitude
+            positions[i] += Math.sin(time + idx * 0.015) * 0.2;
+            positions[i + 1] += Math.cos(time + idx * 0.02) * 0.18;
+            positions[i + 2] += Math.sin(time * 0.7 + idx * 0.012) * 0.25;
+
+            // Size pulsing for dramatic effect
+            sizes[idx] = Math.random() * 3 + 1 + Math.sin(time + idx * 0.1) * 1.5;
           }
           positionAttribute.needsUpdate = true;
+          sizeAttribute.needsUpdate = true;
 
-          // Gentle pulsing with hover interaction
-          const basePulse = 0.5 + Math.sin(time) * 0.2;
-          material.opacity = isHovering ? basePulse + 0.15 : basePulse;
+          // Dramatic pulsing with hover interaction
+          const basePulse = 0.6 + Math.sin(time * 0.5) * 0.25;
+          material.opacity = isHovering ? basePulse + 0.25 : basePulse;
 
-          // Camera subtle movement on hover
+          // Camera dramatic movement on hover
           if (isHovering) {
-            camera.position.x = mouseX * 10;
-            camera.position.y = -mouseY * 10;
+            camera.position.x = mouseX * 15;
+            camera.position.y = -mouseY * 15;
           } else {
-            camera.position.x += (0 - camera.position.x) * 0.02;
-            camera.position.y += (0 - camera.position.y) * 0.02;
+            camera.position.x += (0 - camera.position.x) * 0.03;
+            camera.position.y += (0 - camera.position.y) * 0.03;
           }
 
           renderer.render(scene, camera);
@@ -3050,6 +3115,7 @@
           camera.aspect = newWidth / newHeight;
           camera.updateProjectionMatrix();
           renderer.setSize(newWidth, newHeight);
+          renderer.setPixelRatio(window.devicePixelRatio);
         });
       }
     }
