@@ -430,9 +430,9 @@
 
     .h1-line2 {
       background: linear-gradient(90deg, var(--accent), var(--accent2));
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-clip: text;
     }
 
     .hero-sub {
@@ -527,6 +527,7 @@
       font-weight: 800;
       letter-spacing: -0.02em;
       background: linear-gradient(135deg, #fff, rgba(255, 255, 255, 0.6));
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -1539,11 +1540,14 @@
     .chapter-marker {
       position: relative;
       text-align: center;
-      padding: 60px 24px;
-      margin: 80px 0;
+      padding: 80px 24px;
+      margin: 120px 0;
       opacity: 0;
-      transform: translateY(40px);
-      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transform: translateY(50px);
+      transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .chapter-marker.active {
@@ -1553,54 +1557,76 @@
 
     .chapter-number {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 14px;
-      letter-spacing: 2px;
+      font-size: 12px;
+      letter-spacing: 3px;
       color: var(--accent);
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
       display: block;
+      font-weight: 600;
     }
 
     .chapter-title {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: clamp(28px, 4vw, 48px);
+      font-size: clamp(36px, 5vw, 56px);
       font-weight: 800;
-      letter-spacing: -0.02em;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(0, 212, 255, 0.6));
+      letter-spacing: -0.025em;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(0, 212, 255, 0.7));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 16px;
-      line-height: 1.1;
-    }
-
-    .chapter-subtitle {
-      font-size: 16px;
-      color: rgba(255, 255, 255, 0.5);
-      max-width: 520px;
-      margin: 0 auto;
-      line-height: 1.6;
+      margin-bottom: 20px;
+      line-height: 1.15;
     }
 
     .chapter-divider {
-      width: 60px;
-      height: 1px;
+      width: 80px;
+      height: 2px;
       background: linear-gradient(90deg, transparent, var(--accent), transparent);
-      margin: 24px auto;
+      margin: 28px auto;
     }
 
-    /* Section Intro Overlay (subtle backdrop transition) */
+    .chapter-subtitle {
+      font-size: 17px;
+      color: rgba(255, 255, 255, 0.65);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    .chapter-narrative {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.55);
+      max-width: 700px;
+      margin: 24px auto 0;
+      line-height: 1.8;
+      font-style: italic;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+    }
+
+    .chapter-marker.active .chapter-narrative {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Section Intro Overlay - Narrative transition */
     .section-intro {
       position: relative;
-      padding: 40px;
-      margin: 60px 0;
+      padding: 48px 40px;
+      margin: 60px 0 80px;
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.01);
-      border: 1px solid rgba(0, 112, 255, 0.15);
-      backdrop-filter: blur(10px);
+      background: linear-gradient(135deg,
+        rgba(0, 112, 255, 0.06) 0%,
+        rgba(0, 40, 120, 0.04) 100%);
+      border: 1px solid rgba(0, 112, 255, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.9s ease-out;
+      transform: translateY(40px);
+      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     .section-intro.active {
@@ -1610,11 +1636,11 @@
 
     .intro-text {
       font-size: 18px;
-      line-height: 1.8;
+      line-height: 1.85;
       color: rgba(255, 255, 255, 0.75);
-      font-weight: 500;
+      font-weight: 400;
       text-align: center;
-      max-width: 700px;
+      max-width: 750px;
       margin: 0 auto;
     }
 
@@ -1623,7 +1649,12 @@
       font-weight: 700;
     }
 
-    /* 3D Canvas Container */
+    .intro-text em {
+      color: rgba(0, 212, 255, 0.8);
+      font-style: italic;
+    }
+
+    /* 3D Canvas Container - Sanctuary Moment */
     #threeCanvas {
       position: absolute;
       top: 0;
@@ -1637,29 +1668,90 @@
     .three-js-wrapper {
       position: relative;
       width: 100%;
-      height: 400px;
-      margin: 60px 0;
-      border-radius: 20px;
+      height: 420px;
+      max-width: 1000px;
+      margin: 80px auto;
+      border-radius: 24px;
       overflow: hidden;
-      background: radial-gradient(circle at center, rgba(0, 112, 255, 0.05) 0%, transparent 70%);
-      border: 1px solid rgba(0, 112, 255, 0.1);
+      background: linear-gradient(135deg, 
+        rgba(0, 112, 255, 0.08) 0%,
+        rgba(0, 4, 10, 0.6) 50%,
+        rgba(0, 212, 255, 0.05) 100%);
+      border: 1px solid rgba(0, 112, 255, 0.15);
+      box-shadow: 
+        0 0 60px rgba(0, 112, 255, 0.1),
+        inset 0 0 60px rgba(0, 112, 255, 0.05);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+    }
+
+    .three-js-wrapper.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .three-js-label {
+      position: absolute;
+      top: 24px;
+      left: 32px;
+      z-index: 10;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--accent);
+      text-transform: uppercase;
+      font-weight: 600;
+      opacity: 0.7;
     }
 
     /* Typography Hierarchy Enhancement */
     .section-title {
       position: relative;
       letter-spacing: -0.03em;
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 800;
+      margin-bottom: 12px;
     }
 
     .section-title::before {
       content: '';
       position: absolute;
-      bottom: -8px;
+      bottom: -12px;
       left: 0;
-      width: 80px;
-      height: 4px;
+      width: 100px;
+      height: 3px;
       background: linear-gradient(90deg, var(--accent), transparent);
       border-radius: 2px;
+      transition: width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 110px;
+      width: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent2), transparent);
+      border-radius: 2px;
+      transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+    }
+
+    .section-title.active::after {
+      width: 60px;
+    }
+
+    .section-subtitle {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 32px;
+      margin-bottom: 48px;
+      max-width: 700px;
+      line-height: 1.7;
+      font-weight: 400;
     }
 
     /* Scroll Depth Indicator */
@@ -1731,6 +1823,262 @@
     .stage-desc {
       font-size: 15px;
       color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ===== ENHANCED MAGAZINE-LIKE TYPOGRAPHY ===== */
+    /* Refined heading hierarchy with better spacing */
+    h1, h2, h3, h4, h5, h6 {
+      word-spacing: 0.05em;
+      letter-spacing: -0.015em;
+    }
+
+    /* Section headers with subtext flow */
+    .section-header {
+      position: relative;
+      margin-bottom: 64px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .section-header.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+      font-weight: 600;
+      display: block;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .section-header.active .section-eyebrow {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-heading {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(44px, 6vw, 60px);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(0, 212, 255, 0.8) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+    }
+
+    .section-header.active .section-heading {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-descriptor {
+      font-size: 18px;
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 800px;
+      font-weight: 400;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+    }
+
+    .section-header.active .section-descriptor {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-descriptor strong {
+      color: var(--accent2);
+      font-weight: 700;
+    }
+
+    .section-descriptor em {
+      color: rgba(0, 212, 255, 0.85);
+      font-style: italic;
+    }
+
+    /* ===== SCROLL NARRATIVE VIGNETTES ===== */
+    /* Micro-stories that appear as you scroll */
+    .narrative-vignette {
+      position: fixed;
+      bottom: 40px;
+      left: 40px;
+      max-width: 300px;
+      background: rgba(0, 112, 255, 0.08);
+      border: 1px solid rgba(0, 112, 255, 0.15);
+      border-radius: 16px;
+      padding: 20px 24px;
+      backdrop-filter: blur(12px);
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.65);
+      z-index: 40;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(20px) translateX(-20px);
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      box-shadow: 0 8px 32px rgba(0, 112, 255, 0.1);
+    }
+
+    .narrative-vignette.visible {
+      opacity: 1;
+      transform: translateY(0) translateX(0);
+    }
+
+    .narrative-vignette.exit {
+      opacity: 0;
+      transform: translateY(20px) translateX(-20px);
+    }
+
+    .vignette-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      font-weight: 600;
+      display: block;
+    }
+
+    .vignette-text {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .vignette-text strong {
+      color: var(--accent2);
+      font-weight: 700;
+    }
+
+    /* ===== ENHANCED 3D PARTICLE SANCTUARY ===== */
+    /* Better container and more sophisticated styling */
+    .three-js-wrapper {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      max-width: 1100px;
+      margin: 100px auto;
+      border-radius: 28px;
+      overflow: hidden;
+      background: linear-gradient(135deg, 
+        rgba(0, 112, 255, 0.12) 0%,
+        rgba(0, 4, 10, 0.7) 50%,
+        rgba(0, 212, 255, 0.08) 100%);
+      border: 1.5px solid rgba(0, 112, 255, 0.2);
+      box-shadow: 
+        0 0 80px rgba(0, 112, 255, 0.12),
+        inset 0 0 80px rgba(0, 112, 255, 0.06),
+        0 20px 60px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.15s;
+    }
+
+    .three-js-wrapper.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .three-js-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(0, 112, 255, 0.1) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .three-js-label {
+      position: absolute;
+      top: 28px;
+      left: 36px;
+      z-index: 10;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 2.2px;
+      color: var(--accent);
+      text-transform: uppercase;
+      font-weight: 600;
+      opacity: 0.7;
+      transition: all 0.6s ease;
+    }
+
+    .three-js-wrapper:hover .three-js-label {
+      opacity: 1;
+    }
+
+    .three-js-subtitle {
+      position: absolute;
+      bottom: 28px;
+      right: 36px;
+      z-index: 10;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+      font-style: italic;
+      opacity: 0.6;
+      transition: all 0.6s ease;
+    }
+
+    .three-js-wrapper:hover .three-js-subtitle {
+      opacity: 1;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* ===== RESPONSIVE TYPOGRAPHY ===== */
+    @media (max-width: 768px) {
+      .section-heading {
+        font-size: clamp(32px, 5vw, 44px);
+      }
+
+      .section-descriptor {
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .narrative-vignette {
+        max-width: 260px;
+        bottom: 20px;
+        left: 20px;
+        font-size: 13px;
+        padding: 16px 20px;
+      }
+
+      .three-js-wrapper {
+        height: 380px;
+        margin: 60px auto;
+      }
+
+      .three-js-label {
+        font-size: 11px;
+        letter-spacing: 1.8px;
+        top: 20px;
+        left: 24px;
+      }
+
+      .three-js-subtitle {
+        bottom: 20px;
+        right: 24px;
+        font-size: 12px;
+      }
     }
   </style>
 </head>
@@ -1854,6 +2202,7 @@
         <h2 class="chapter-title">Where Code Meets Impact</h2>
         <div class="chapter-divider"></div>
         <p class="chapter-subtitle">A full-stack journey through systems that scale, AI platforms that govern, and ventures that ship.</p>
+        <p class="chapter-narrative">Every line of code begins with a question: "What problem are we solving?" This portfolio is a living archive of that obsession—from real-time fraud detection to heritage preservation, from local AI workflows to multi-provider cost optimization. Not every project succeeded equally, but each shaped the builder.</p>
       </div>
 
       <div id="about" class="about-section content-card">
@@ -1876,7 +2225,11 @@
       </div>
 
       <div id="projects" class="reveal">
-        <h2 class="section-title">High-Impact Projects</h2>
+        <div class="section-header">
+          <span class="section-eyebrow">01 — The Build</span>
+          <h2 class="section-heading">High-Impact Projects</h2>
+          <p class="section-descriptor">Production-grade applications with <strong>real users</strong>, real revenue, and tangible impact. These aren't portfolioware—<em>Tokenistt handles millions in LLM spend tracking, Dharohar protects Indigenous knowledge at AWS scale, RealtimeGuard secures fintech transactions</em>. Each project taught hard lessons about architecture, latency, and shipping.</p>
+        </div>
 
         <!-- CHAPTER 01: THE BUILD -->
         <div class="chapter-marker" style="margin: 40px 0 60px;">
@@ -1884,10 +2237,14 @@
           <h3 class="chapter-title">Systems That Scale</h3>
           <div class="chapter-divider"></div>
           <p class="chapter-subtitle">Production-grade applications with real users, real revenue, and real impact.</p>
+          <p class="chapter-narrative">These aren't portfolioware. <strong>Tokenistt</strong> handles millions in LLM spend tracking. <strong>Dharohar</strong> protects Indigenous knowledge at AWS scale. <strong>RealtimeGuard</strong> secures fintech transactions with blockchain-backed audits. Each project taught hard lessons about architecture, latency, and the gap between demos and deployments.</p>
         </div>
 
         <!-- Subtle 3D Particle Sanctuary -->
-        <div class="three-js-wrapper" id="threeJsContainer"></div>
+        <div class="three-js-wrapper" id="threeJsContainer">
+          <span class="three-js-label">02 — THE SANCTUARY</span>
+          <span class="three-js-subtitle">A moment of particle meditation</span>
+        </div>
 
         <div class="features">
 
@@ -2099,7 +2456,13 @@
         </div>
       </div>
 
-      <div class="skills-grid">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">03 — The Arsenal</span>
+        <h2 class="section-heading">Technical Mastery</h2>
+        <p class="section-descriptor">Organized by domain, not alphabetically. <strong>Full-stack depth</strong> across AI infrastructure, blockchain systems, and <em>high-performance real-time applications</em>. Every tool has shipped production code.</p>
+      </div>
+
+      <div class="skills-grid reveal">
         <div class="skill-card">
           <div class="skill-category">Languages</div>
           <div class="skill-list">
@@ -2137,7 +2500,11 @@
       </div>
 
       <div id="experience" class="experience-section">
-        <h2 class="section-title">Experience & Education</h2>
+        <div class="section-header reveal">
+          <span class="section-eyebrow">04 — The Journey</span>
+          <h2 class="section-heading">Experience & Education</h2>
+          <p class="section-descriptor">From <strong>hackathon victories</strong> to <em>building at scale</em>. Every role, every competition shaped the engineer and founder I am today.</p>
+        </div>
 
         <!-- CHAPTER 02: THE JOURNEY -->
         <div class="chapter-marker" style="margin: 20px 0 50px;">
@@ -2195,7 +2562,11 @@
       </div>
 
       <div id="achievements" class="achievements-section reveal">
-        <h2 class="section-title">Achievements & Leadership</h2>
+        <div class="section-header reveal">
+          <span class="section-eyebrow">05 — The Recognition</span>
+          <h2 class="section-heading">Achievements & Leadership</h2>
+          <p class="section-descriptor"><strong>National recognition</strong>, competitive excellence, and the teams I've led to victory. <em>From hackathons to sports championships</em>—leadership is leadership.</p>
+        </div>
 
         <!-- CHAPTER 03: THE PEAK -->
         <div class="chapter-marker" style="margin: 20px 0 50px;">
@@ -2277,7 +2648,11 @@
 
 
       <div id="contact" class="contact-section reveal">
-        <h2 class="section-title" style="text-align: center;">Let's Connect</h2>
+        <div class="section-header reveal">
+          <span class="section-eyebrow">06 — The Connection</span>
+          <h2 class="section-heading">Let's Build Together</h2>
+          <p class="section-descriptor">Whether it's a startup idea, a technical challenge, or just coffee to talk about systems design—<strong>reach out</strong>. I'm always <em>obsessed with shipping</em>.</p>
+        </div>
         <div class="contact-container">
           <!-- Left Side: Social Panels -->
           <div class="contact-info-panel">
@@ -2426,6 +2801,101 @@
       scrollDepth.style.width = scrolled + '%';
     });
 
+    // === SCROLL NARRATIVE VIGNETTES ===
+    // Mini-stories that appear/change as you scroll through sections
+    const narrativeVignettes = [
+      {
+        trigger: 'hero',
+        label: '00 — AWAKENING',
+        text: 'Every builder starts with a question: <strong>What problem matters?</strong> This portfolio is the archive of obsession across five years of shipping.'
+      },
+      {
+        trigger: 'projects',
+        label: '01 — THE BUILD',
+        text: '<strong>Tokenistt handles millions</strong> in LLM spend. Dharohar protects Indigenous knowledge at AWS scale. Not portfolioware—<em>real users, real impact</em>.'
+      },
+      {
+        trigger: 'skills',
+        label: '03 — THE ARSENAL',
+        text: 'Full-stack depth across AI, blockchain, and real-time systems. <strong>Every tool has shipped</strong> production code under pressure.'
+      },
+      {
+        trigger: 'experience',
+        label: '04 — THE JOURNEY',
+        text: 'From hackathon victories to founding at scale. <strong>Every role shaped</strong> the engineer and founder I am today.'
+      },
+      {
+        trigger: 'achievements',
+        label: '05 — THE RECOGNITION',
+        text: '<strong>National recognition</strong> in competitive engineering. Leadership isn\'t just startups—<em>it\'s everywhere</em>.'
+      },
+      {
+        trigger: 'contact',
+        label: '06 — THE CONNECTION',
+        text: 'Whether it\'s a startup idea or a technical challenge—<strong>let\'s build</strong>. I\'m obsessed with shipping.'
+      }
+    ];
+
+    let currentVignetteIndex = -1;
+    let vignettesInit = false;
+
+    function initVignettes() {
+      if (!vignettesInit) {
+        narrativeVignettes.forEach((v, i) => {
+          const section = document.getElementById(v.trigger);
+          if (section) {
+            section.dataset.vignetteIndex = i;
+          }
+        });
+        vignettesInit = true;
+      }
+    }
+
+    function updateVignette() {
+      initVignettes();
+      const sections = narrativeVignettes.map((v, i) => ({
+        index: i,
+        element: document.getElementById(v.trigger)
+      })).filter(s => s.element);
+
+      let activeIndex = -1;
+      for (let section of sections) {
+        const rect = section.element.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.5) {
+          activeIndex = section.index;
+        } else {
+          break;
+        }
+      }
+
+      if (activeIndex !== currentVignetteIndex && activeIndex >= 0) {
+        currentVignetteIndex = activeIndex;
+        const vignette = narrativeVignettes[activeIndex];
+
+        let vignetteEl = document.getElementById('narrativeVignette');
+        if (!vignetteEl) {
+          vignetteEl = document.createElement('div');
+          vignetteEl.id = 'narrativeVignette';
+          vignetteEl.className = 'narrative-vignette visible';
+          document.body.appendChild(vignetteEl);
+        } else {
+          vignetteEl.classList.add('exit');
+          setTimeout(() => {
+            vignetteEl.classList.remove('exit');
+          }, 100);
+        }
+
+        vignetteEl.innerHTML = `
+          <span class="vignette-label">${vignette.label}</span>
+          <div class="vignette-text">${vignette.text}</div>
+        `;
+        vignetteEl.classList.add('visible');
+      }
+    }
+
+    window.addEventListener('scroll', updateVignette, { passive: true });
+    updateVignette(); // Initialize on page load
+
     // === CHAPTER MARKER & CONTENT CARD REVEAL ===
     const revealOptions = {
       threshold: 0.15,
@@ -2436,15 +2906,26 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-          // Optional: stop observing once revealed for performance
-          // revealObserver.unobserve(entry.target);
         }
       });
     }, revealOptions);
 
-    // Observe all chapter markers and content cards
-    document.querySelectorAll('.chapter-marker, .content-card, .section-intro').forEach(el => {
+    // Observe all chapter markers, content cards, section intros, section headers, and 3D container
+    document.querySelectorAll('.chapter-marker, .content-card, .section-intro, .section-header, .three-js-wrapper').forEach(el => {
       revealObserver.observe(el);
+    });
+
+    // === SECTION TITLE UNDERLINE ANIMATION ===
+    const titleObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.section-title').forEach(el => {
+      titleObserver.observe(el);
     });
 
     // === THREE.JS PARTICLE SANCTUARY ===
@@ -2463,20 +2944,26 @@
 
         camera.position.z = 30;
 
-        // Create particle geometry
+        // Create particle geometry with enhanced count and spread
         const geometry = new THREE.BufferGeometry();
-        const particleCount = 150;
+        const particleCount = 200;
         const positions = new Float32Array(particleCount * 3);
         const colors = new Float32Array(particleCount * 3);
+        const velocities = new Float32Array(particleCount * 3);
 
         for (let i = 0; i < particleCount * 3; i += 3) {
-          positions[i] = (Math.random() - 0.5) * 80;
-          positions[i + 1] = (Math.random() - 0.5) * 80;
-          positions[i + 2] = (Math.random() - 0.5) * 80;
+          positions[i] = (Math.random() - 0.5) * 100;
+          positions[i + 1] = (Math.random() - 0.5) * 100;
+          positions[i + 2] = (Math.random() - 0.5) * 100;
 
-          // Blue to Cyan gradient
-          const hue = Math.random() * 0.5 + 0.5; // 50-100% of blue spectrum
-          const color = new THREE.Color().setHSL(hue, 0.8, 0.6);
+          // Velocity for organic movement
+          velocities[i] = (Math.random() - 0.5) * 0.02;
+          velocities[i + 1] = (Math.random() - 0.5) * 0.02;
+          velocities[i + 2] = (Math.random() - 0.5) * 0.02;
+
+          // Blue to Cyan gradient with higher saturation
+          const hue = Math.random() * 0.3 + 0.55; // 55-85% of spectrum (cyan-blue)
+          const color = new THREE.Color().setHSL(hue, 0.9, 0.55);
           colors[i] = color.r;
           colors[i + 1] = color.g;
           colors[i + 2] = color.b;
@@ -2484,28 +2971,72 @@
 
         geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
         geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+        const positionAttribute = geometry.getAttribute('position');
 
         const material = new THREE.PointsMaterial({
-          size: 2,
+          size: 1.5,
           sizeAttenuation: true,
           vertexColors: true,
           transparent: true,
-          opacity: 0.6
+          opacity: 0.7,
+          sizeRange: [1, 3]
         });
 
         const points = new THREE.Points(geometry, material);
         scene.add(points);
 
-        // Animation loop
+        // Add subtle light interaction
+        const light = new THREE.AmbientLight(0x0070ff, 0.3);
+        scene.add(light);
+
+        let time = 0;
+        let isHovering = false;
+        let mouseX = 0;
+        let mouseY = 0;
+
+        container.addEventListener('mouseenter', () => { isHovering = true; });
+        container.addEventListener('mouseleave', () => { isHovering = false; });
+        container.addEventListener('mousemove', (e) => {
+          const rect = container.getBoundingClientRect();
+          mouseX = (e.clientX - rect.left) / width - 0.5;
+          mouseY = (e.clientY - rect.top) / height - 0.5;
+        });
+
+        // Animation loop with wave simulation
         function animateParticles() {
           requestAnimationFrame(animateParticles);
 
-          points.rotation.x += 0.0001;
-          points.rotation.y += 0.0002;
-          points.rotation.z += 0.00015;
+          time += 0.005;
 
-          // Gentle pulsing
-          material.opacity = 0.4 + Math.sin(Date.now() * 0.001) * 0.2;
+          // Rotate for organic feel
+          points.rotation.x += 0.00015;
+          points.rotation.y += 0.0003;
+          points.rotation.z += 0.00025;
+
+          // Update particle positions for wave effect
+          const positions = positionAttribute.array;
+          for (let i = 0; i < positions.length; i += 3) {
+            // Gentle wave distortion
+            const idx = i / 3;
+            const originalX = (Math.random() - 0.5) * 100;
+            positions[i] += Math.sin(time + idx * 0.01) * 0.1;
+            positions[i + 1] += Math.cos(time + idx * 0.015) * 0.08;
+            positions[i + 2] += Math.sin(time * 0.5 + idx * 0.008) * 0.12;
+          }
+          positionAttribute.needsUpdate = true;
+
+          // Gentle pulsing with hover interaction
+          const basePulse = 0.5 + Math.sin(time) * 0.2;
+          material.opacity = isHovering ? basePulse + 0.15 : basePulse;
+
+          // Camera subtle movement on hover
+          if (isHovering) {
+            camera.position.x = mouseX * 10;
+            camera.position.y = -mouseY * 10;
+          } else {
+            camera.position.x += (0 - camera.position.x) * 0.02;
+            camera.position.y += (0 - camera.position.y) * 0.02;
+          }
 
           renderer.render(scene, camera);
         }
